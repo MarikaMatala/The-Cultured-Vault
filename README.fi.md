@@ -33,13 +33,13 @@ Katso käyttöehdot tiedostosta [LICENSE](LICENSE). Projektin nimi, logo ja muu 
 
 Erillinen asennettava selainpohjainen PWA-demo löytyy ylläpitäjän portfoliosta: [Avaa The-Cultured-Vault-demo v1.0](https://marikamatala.github.io/The-Cultured-Vault-demo/). Demossa on tällä hetkellä 500 kuratoitua esimerkkiteosta. Se havainnollistaa katalogin selaamista ja suodatusta, ylläpitäjän oman arvion tilaa ”Ei vielä arviota”, erillisiä IMDb-viitearvosanoja sekä kävijöiden paikallisia teosehdotuksia.
 
-PWA on käyttöliittymän esittelyversio, ei tässä repositoriossa suunniteltu varsinainen sovellus. Ehdotukset tallentuvat vain kävijän selaimeen. Demossa ei ole käyttäjätilejä, yhteisiä arvosteluja, pilvisynkronointia eikä tuotantokäyttöön tarkoitettua backendia. Tämä projektirepositorio sisältää edelleen suunnitteludokumentit ja aloituskatalogin.
+PWA on käyttöliittymän esittelyversio, ei tässä repositoriossa suunniteltu varsinainen sovellus. Ehdotukset tallentuvat vain kävijän selaimeen. Demossa ei ole käyttäjätilejä, yhteisiä arvosteluja, pilvisynkronointia eikä tuotantokäyttöön tarkoitettua backendia. Repositoriossa on nyt myös alustava Supabase-tietokantarakenne ja paikallinen kehitysmääritys. Niitä ei ole vielä otettu käyttöön palvelimella.
 
 ## Projektin tila
 
 🚧 **Varhainen kehitysvaihe – suunnittelu ja perustukset**
 
-Repositoriossa on tällä hetkellä projektin kuvaus, dokumentaatio, alustava kehityssuunnitelma ja pieni esimerkkikatalogi. Varsinaista sovellusta ei ole vielä toteutettu. Suunnitellut ominaisuudet eivät siis ole vielä käytettävissä.
+Repositoriossa on projektin kuvaus, dokumentaatio, esimerkkikatalogi ja alustava tietokantaperusta. Varsinaista sovellusta tai tuotantopalvelua ei ole vielä toteutettu. Suunnitellut ominaisuudet eivät siis ole vielä käytettävissä.
 
 ## Tavoitellut ominaisuudet
 
