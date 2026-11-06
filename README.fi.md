@@ -12,6 +12,10 @@
 - [Aloituskatalogi](data/catalog-seed.json)
 - [English README](README.md)
 
+## Aloituskatalogi
+
+Aloituskatalogia on laajennettu Studio Ghiblin ja Disneyn animaatioilla, 1990- ja 2000-lukujen nostalgiaelokuvilla, yliluonnollisilla ja kulttisarjoilla sekä kansainvälisesti tunnetuilla Netflix-sarjoilla. Tunnisteet kuten `nostalgia-90s`, `nostalgia-2000s`, `studio-ghibli`, `disney`, `netflix-original` ja `streaming-hit` ovat toimituksellisia luokitteluja. Ne eivät tarkoita reaaliaikaista suoratoistosaatavuutta tai jatkuvasti päivittyvää suosiolistaa.
+
 ## Teknologiasuunta
 
 Mahdollinen teknologiapino on Next.js, React, TypeScript, Tailwind CSS, PostgreSQL ja Supabase. Elokuva- ja televisiotietojen lähteiksi voidaan arvioida TMDB:tä ja musiikkitietojen lähteeksi MusicBrainzia.
