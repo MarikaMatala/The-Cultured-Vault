@@ -1,5 +1,7 @@
 # The Cultured Vault
 
+<!-- Last updated: 2026-11-06 20:27 (Europe/Helsinki). -->
+
 <p align="center"><strong>Culture worth discovering. Stories worth remembering.</strong></p>
 <p align="center">An open-source personal archive and community for everything worth watching, listening to, reading, playing and experiencing.</p>
 
@@ -27,6 +29,12 @@ This repository is public and intended for reuse. You can explore the source, fo
 The Cultured Vault is not intended to be a single personal account shared by everyone. Each deployment should have its own configuration, database, users and content. You can run your own independent instance and make it your own.
 
 See [LICENSE](LICENSE) for permissions and conditions. The project name, logo and other branding are not automatically granted as a trademark or endorsement by the software licence.
+
+## Browser demo | Portfolio preview
+
+A separate, installable browser-based PWA demo is available in the maintainer's portfolio repository: [Open The-Cultured-Vault-demo v1.0](https://marikamatala.github.io/The-Cultured-Vault-demo/). It currently presents a curated sample catalogue of 500 works and demonstrates browsing, filtering, the “Not rated yet” owner-rating state, separately labelled IMDb reference ratings and local-only visitor suggestions.
+
+The PWA is a front-end concept preview, not the application implementation described in this repository. Suggestions remain in the visitor's browser; there are no user accounts, shared reviews, cloud synchronisation or production backend in the demo. The core project repository still contains planning documents and seed data only.
 
 ## Project status
 
