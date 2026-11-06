@@ -6,7 +6,7 @@ These guidelines define how the starter catalogue and future curated collections
 
 The catalogue should be broad, curious and internationally minded. It should include influential classics, popular works, cult favourites, independent productions, overlooked discoveries and culturally significant works.
 
-There is no single universal list of things everyone must experience. Labels such as "essential", "landmark" or "widely acclaimed" should be explained as editorial tags, not objective facts.
+There is no single universal list of things everyone must experience. Labels such as "essential", "landmark" or "widely acclaimed" should be explained as editorial tags, not objective facts. Forks and independent deployments are free to adapt their own catalogue and editorial criteria.
 
 ## Diversity checklist
 
@@ -39,7 +39,8 @@ Do not invent missing metadata. Leave unknown fields empty until verified.
 - Do not commit poster art, album covers, screenshots or other copyrighted media files without a clear right to use them.
 - Prefer provider APIs or permitted links for artwork.
 - Keep provider identifiers separate from the project's own IDs.
+- Each deployment operator is responsible for their own API credentials, usage and compliance.
 
 ## Personal opinions
 
-Editorial tags and community averages must never be presented as the owner's personal opinion. The owner's rating and review must remain clearly attributed to the owner.
+Editorial tags and community averages must never be presented as an individual's personal opinion. Each deployment should clearly attribute its owner rating and member reviews to the correct people.
