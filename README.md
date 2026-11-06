@@ -34,13 +34,13 @@ See [LICENSE](LICENSE) for permissions and conditions. The project name, logo an
 
 A separate, installable browser-based PWA demo is available in the maintainer's portfolio repository: [Open The-Cultured-Vault-demo v1.0](https://marikamatala.github.io/The-Cultured-Vault-demo/). It currently presents a curated sample catalogue of 500 works and demonstrates browsing, filtering, the “Not rated yet” owner-rating state, separately labelled IMDb reference ratings and local-only visitor suggestions.
 
-The PWA is a front-end concept preview, not the application implementation described in this repository. Suggestions remain in the visitor's browser; there are no user accounts, shared reviews, cloud synchronisation or production backend in the demo. The core project repository still contains planning documents and seed data only.
+The PWA is a front-end concept preview, not the application implementation described in this repository. Suggestions remain in the visitor's browser; there are no user accounts, shared reviews, cloud synchronisation or production backend in the demo. The core repository now also contains an initial Supabase database schema, row-level security migrations and local CLI configuration. These are development foundations only: they have not been run against a hosted database, and the production application is not implemented.
 
 ## Project status
 
 🚧 **Early development — planning and foundations**
 
-This repository currently contains the project concept, documentation, initial roadmap and a small sample catalogue. The application itself is not yet implemented. Features and technologies described as planned are goals, not working functionality.
+This repository contains the project concept, documentation, sample catalogue and an initial database foundation. The database migrations are not yet validated against a live project, and the application frontend, hosted backend and user-facing features are not yet implemented. Planned features are not working functionality.
 
 ## What the project aims to include
 
