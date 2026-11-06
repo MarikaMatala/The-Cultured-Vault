@@ -1,17 +1,31 @@
 # Contributing
 
-Thank you for your interest in The Cultured Vault.
+Thank you for your interest in The Cultured Vault!
 
-The project is in an early planning stage. Contributions and suggestions are welcome, but please check the roadmap and open an issue before starting substantial work.
+The Cultured Vault is a public open-source project. Contributions from developers, designers, translators, accessibility reviewers and culture enthusiasts are welcome.
 
 ## Ways to contribute
 
 - Report a reproducible bug.
-- Suggest a feature or improvement.
+- Suggest or implement a feature.
 - Improve documentation.
+- Translate or improve Finnish and English text.
 - Review accessibility and responsive behaviour.
 - Suggest diverse catalogue entries and curated collections.
-- Submit a focused pull request once implementation begins.
+- Submit a focused pull request.
+
+## Forks and independent deployments
+
+You are welcome to fork this repository and adapt it for your own use under the terms of the MIT License.
+
+A fork or self-hosted deployment should use its own:
+- Application configuration and environment variables.
+- Database and authentication project.
+- API credentials and provider accounts.
+- User accounts and personal content.
+- Deployment environment and domain.
+
+Never use the original maintainer's private credentials, database, accounts or personal content. Do not commit secrets to your fork.
 
 ## Before opening an issue
 
@@ -23,17 +37,18 @@ Please include:
 - Relevant screenshots or logs, with personal information and secrets removed.
 - Browser, device and operating system details when relevant.
 
-For feature requests, explain the problem the feature would solve and how it might work. Do not include passwords, API keys, private user data or other secrets.
+For feature requests, explain the problem the feature would solve and how it might work.
 
 ## Pull requests
 
-1. Discuss larger changes in an issue first.
-2. Keep each pull request focused on one concern.
-3. Use descriptive branch names and commit messages.
-4. Update relevant documentation.
-5. Add or update tests when application code exists.
-6. Check formatting, linting and tests before requesting review.
-7. Do not commit secrets, generated credentials, private data or copyrighted media files.
+1. Fork the repository and create a focused branch.
+2. Discuss larger changes in an issue first.
+3. Keep each pull request focused on one concern.
+4. Use descriptive branch names and commit messages.
+5. Update relevant documentation.
+6. Add or update tests when application code exists.
+7. Check formatting, linting and tests before requesting review.
+8. Do not commit secrets, generated credentials, private data or copyrighted media files.
 
 ## Code and design expectations
 
@@ -44,7 +59,10 @@ For feature requests, explain the problem the feature would solve and how it mig
 - Support reduced-motion preferences.
 - Treat all user-generated content as untrusted input.
 - Do not introduce a new dependency without a clear reason.
+- Avoid hard-coding instance-specific names, URLs, credentials or owner IDs.
 
-## Licence and reuse
+## Licence
 
-The project has not yet selected an open-source licence. Do not assume that contributions or project materials may be reused, redistributed or relicensed without permission. Licence and contribution terms will be clarified before accepting substantial external contributions.
+Contributions to this repository are expected to be provided under the repository's MIT License, unless a contribution is explicitly marked otherwise and accepted by the maintainer. By submitting a contribution, you confirm that you have the right to submit it under those terms.
+
+The project name, logo and separately identified branding are not automatically covered as trademarks by the software licence.
