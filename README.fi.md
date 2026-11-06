@@ -1,5 +1,7 @@
 # The Cultured Vault
 
+<!-- Päivitetty: 6.11.2026 klo 20.27 (Europe/Helsinki). -->
+
 <p align="center"><strong>Kulttuuria löydettäväksi. Tarinoita muistettavaksi.</strong></p>
 <p align="center">Avoimen lähdekoodin henkilökohtainen kulttuuriarkisto ja yhteisö kaikelle kokemisen, katsomisen, kuuntelemisen, lukemisen ja pelaamisen arvoiselle.</p>
 
@@ -26,6 +28,12 @@ Tämä repositorio on julkinen ja tarkoitettu myös muiden hyödynnettäväksi. 
 The Cultured Vault ei ole yksi yhteinen henkilökohtainen käyttäjätili. Jokaisella asennuksella on tarkoitus olla oma määrityksensä, tietokantansa, käyttäjänsä ja sisältönsä. Voit siis ylläpitää omaa erillistä versiotasi ja muokata sitä omiin tarpeisiisi.
 
 Katso käyttöehdot tiedostosta [LICENSE](LICENSE). Projektin nimi, logo ja muu brändi eivät automaattisesti muutu tavaramerkkinä vapaasti käytettäviksi ohjelmistolisenssin perusteella.
+
+## Selain-demo | Portfolioesittely
+
+Erillinen asennettava selainpohjainen PWA-demo löytyy ylläpitäjän portfoliosta: [Avaa The-Cultured-Vault-demo v1.0](https://marikamatala.github.io/The-Cultured-Vault-demo/). Demossa on tällä hetkellä 500 kuratoitua esimerkkiteosta. Se havainnollistaa katalogin selaamista ja suodatusta, ylläpitäjän oman arvion tilaa ”Ei vielä arviota”, erillisiä IMDb-viitearvosanoja sekä kävijöiden paikallisia teosehdotuksia.
+
+PWA on käyttöliittymän esittelyversio, ei tässä repositoriossa suunniteltu varsinainen sovellus. Ehdotukset tallentuvat vain kävijän selaimeen. Demossa ei ole käyttäjätilejä, yhteisiä arvosteluja, pilvisynkronointia eikä tuotantokäyttöön tarkoitettua backendia. Tämä projektirepositorio sisältää edelleen suunnitteludokumentit ja aloituskatalogin.
 
 ## Projektin tila
 
