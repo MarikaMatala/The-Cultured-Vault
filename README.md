@@ -12,6 +12,10 @@
 - [Starter catalogue](data/catalog-seed.json)
 - [Finnish README](README.fi.md)
 
+## Starter catalogue
+
+The starter catalogue includes a broader selection of Studio Ghibli and Disney animation, 1990s and 2000s nostalgia films, supernatural and cult television, and internationally popular Netflix series. Editorial tags such as `nostalgia-90s`, `nostalgia-2000s`, `studio-ghibli`, `disney`, `netflix-original` and `streaming-hit` support discovery; they are curated descriptors, not live streaming availability or a continuously updated popularity ranking.
+
 ## Development principles
 
 - Make the project reusable and configurable for independent deployments.
