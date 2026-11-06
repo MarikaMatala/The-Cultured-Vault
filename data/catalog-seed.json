@@ -268,23 +268,6 @@
     ]
   },
   {
-    "id": "animation-spirited-away-2001",
-    "title": "Spirited Away",
-    "mediaType": "animation-film",
-    "releaseYear": 2001,
-    "genres": [
-      "adventure",
-      "fantasy"
-    ],
-    "country": "Japan",
-    "language": "ja",
-    "tags": [
-      "studio-ghibli",
-      "widely-acclaimed"
-    ],
-    "originalTitle": "千と千尋の神隠し"
-  },
-  {
     "id": "animation-howl-s-moving-castle-2004",
     "title": "Howl's Moving Castle",
     "mediaType": "animation-film",
