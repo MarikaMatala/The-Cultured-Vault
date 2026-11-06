@@ -218,5 +218,1348 @@
     "tags": [
       "literary-classic"
     ]
+  },
+  {
+    "id": "animation-my-neighbor-totoro-1988",
+    "title": "My Neighbor Totoro",
+    "mediaType": "animation-film",
+    "releaseYear": 1988,
+    "genres": [
+      "family",
+      "fantasy"
+    ],
+    "country": "Japan",
+    "language": "ja",
+    "tags": [
+      "studio-ghibli",
+      "animation-classic"
+    ]
+  },
+  {
+    "id": "animation-kiki-s-delivery-service-1989",
+    "title": "Kiki's Delivery Service",
+    "mediaType": "animation-film",
+    "releaseYear": 1989,
+    "genres": [
+      "adventure",
+      "fantasy"
+    ],
+    "country": "Japan",
+    "language": "ja",
+    "tags": [
+      "studio-ghibli",
+      "animation-classic"
+    ]
+  },
+  {
+    "id": "animation-princess-mononoke-1997",
+    "title": "Princess Mononoke",
+    "mediaType": "animation-film",
+    "releaseYear": 1997,
+    "genres": [
+      "adventure",
+      "fantasy"
+    ],
+    "country": "Japan",
+    "language": "ja",
+    "tags": [
+      "studio-ghibli",
+      "cult-classic"
+    ]
+  },
+  {
+    "id": "animation-spirited-away-2001",
+    "title": "Spirited Away",
+    "mediaType": "animation-film",
+    "releaseYear": 2001,
+    "genres": [
+      "adventure",
+      "fantasy"
+    ],
+    "country": "Japan",
+    "language": "ja",
+    "tags": [
+      "studio-ghibli",
+      "widely-acclaimed"
+    ],
+    "originalTitle": "千と千尋の神隠し"
+  },
+  {
+    "id": "animation-howl-s-moving-castle-2004",
+    "title": "Howl's Moving Castle",
+    "mediaType": "animation-film",
+    "releaseYear": 2004,
+    "genres": [
+      "adventure",
+      "fantasy",
+      "romance"
+    ],
+    "country": "Japan",
+    "language": "ja",
+    "tags": [
+      "studio-ghibli",
+      "widely-acclaimed"
+    ]
+  },
+  {
+    "id": "animation-ponyo-2008",
+    "title": "Ponyo",
+    "mediaType": "animation-film",
+    "releaseYear": 2008,
+    "genres": [
+      "family",
+      "fantasy"
+    ],
+    "country": "Japan",
+    "language": "ja",
+    "tags": [
+      "studio-ghibli",
+      "animation-classic"
+    ]
+  },
+  {
+    "id": "animation-castle-in-the-sky-1986",
+    "title": "Castle in the Sky",
+    "mediaType": "animation-film",
+    "releaseYear": 1986,
+    "genres": [
+      "adventure",
+      "fantasy"
+    ],
+    "country": "Japan",
+    "language": "ja",
+    "tags": [
+      "studio-ghibli",
+      "animation-classic"
+    ]
+  },
+  {
+    "id": "animation-the-secret-world-of-arrietty-2010",
+    "title": "The Secret World of Arrietty",
+    "mediaType": "animation-film",
+    "releaseYear": 2010,
+    "genres": [
+      "adventure",
+      "fantasy"
+    ],
+    "country": "Japan",
+    "language": "ja",
+    "tags": [
+      "studio-ghibli",
+      "animation"
+    ]
+  },
+  {
+    "id": "animation-the-boy-and-the-heron-2023",
+    "title": "The Boy and the Heron",
+    "mediaType": "animation-film",
+    "releaseYear": 2023,
+    "genres": [
+      "adventure",
+      "fantasy"
+    ],
+    "country": "Japan",
+    "language": "ja",
+    "tags": [
+      "studio-ghibli",
+      "modern-classic"
+    ]
+  },
+  {
+    "id": "animation-the-tale-of-the-princess-kaguya-2013",
+    "title": "The Tale of the Princess Kaguya",
+    "mediaType": "animation-film",
+    "releaseYear": 2013,
+    "genres": [
+      "drama",
+      "fantasy"
+    ],
+    "country": "Japan",
+    "language": "ja",
+    "tags": [
+      "studio-ghibli",
+      "animation"
+    ]
+  },
+  {
+    "id": "animation-nausica-of-the-valley-of-the-wind-1984",
+    "title": "Nausicaä of the Valley of the Wind",
+    "mediaType": "animation-film",
+    "releaseYear": 1984,
+    "genres": [
+      "adventure",
+      "science-fiction"
+    ],
+    "country": "Japan",
+    "language": "ja",
+    "tags": [
+      "studio-ghibli",
+      "animation-classic"
+    ]
+  },
+  {
+    "id": "animation-whisper-of-the-heart-1995",
+    "title": "Whisper of the Heart",
+    "mediaType": "animation-film",
+    "releaseYear": 1995,
+    "genres": [
+      "drama",
+      "romance"
+    ],
+    "country": "Japan",
+    "language": "ja",
+    "tags": [
+      "studio-ghibli",
+      "coming-of-age"
+    ]
+  },
+  {
+    "id": "animation-the-cat-returns-2002",
+    "title": "The Cat Returns",
+    "mediaType": "animation-film",
+    "releaseYear": 2002,
+    "genres": [
+      "adventure",
+      "fantasy"
+    ],
+    "country": "Japan",
+    "language": "ja",
+    "tags": [
+      "studio-ghibli",
+      "animation"
+    ]
+  },
+  {
+    "id": "animation-the-wind-rises-2013",
+    "title": "The Wind Rises",
+    "mediaType": "animation-film",
+    "releaseYear": 2013,
+    "genres": [
+      "drama",
+      "history"
+    ],
+    "country": "Japan",
+    "language": "ja",
+    "tags": [
+      "studio-ghibli",
+      "animation"
+    ]
+  },
+  {
+    "id": "animation-only-yesterday-1991",
+    "title": "Only Yesterday",
+    "mediaType": "animation-film",
+    "releaseYear": 1991,
+    "genres": [
+      "drama",
+      "coming-of-age"
+    ],
+    "country": "Japan",
+    "language": "ja",
+    "tags": [
+      "studio-ghibli",
+      "animation"
+    ]
+  },
+  {
+    "id": "animation-the-lion-king-1994",
+    "title": "The Lion King",
+    "mediaType": "animation-film",
+    "releaseYear": 1994,
+    "genres": [
+      "adventure",
+      "drama",
+      "family"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "disney",
+      "disney-renaissance",
+      "animation-classic"
+    ]
+  },
+  {
+    "id": "animation-beauty-and-the-beast-1991",
+    "title": "Beauty and the Beast",
+    "mediaType": "animation-film",
+    "releaseYear": 1991,
+    "genres": [
+      "fantasy",
+      "romance",
+      "family"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "disney",
+      "disney-renaissance",
+      "animation-classic"
+    ]
+  },
+  {
+    "id": "animation-aladdin-1992",
+    "title": "Aladdin",
+    "mediaType": "animation-film",
+    "releaseYear": 1992,
+    "genres": [
+      "adventure",
+      "fantasy",
+      "family"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "disney",
+      "disney-renaissance",
+      "animation-classic"
+    ]
+  },
+  {
+    "id": "animation-the-little-mermaid-1989",
+    "title": "The Little Mermaid",
+    "mediaType": "animation-film",
+    "releaseYear": 1989,
+    "genres": [
+      "fantasy",
+      "romance",
+      "family"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "disney",
+      "disney-renaissance",
+      "animation-classic"
+    ]
+  },
+  {
+    "id": "animation-mulan-1998",
+    "title": "Mulan",
+    "mediaType": "animation-film",
+    "releaseYear": 1998,
+    "genres": [
+      "adventure",
+      "drama",
+      "family"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "disney",
+      "disney-renaissance",
+      "animation-classic"
+    ]
+  },
+  {
+    "id": "animation-tarzan-1999",
+    "title": "Tarzan",
+    "mediaType": "animation-film",
+    "releaseYear": 1999,
+    "genres": [
+      "adventure",
+      "family"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "disney",
+      "disney-renaissance",
+      "nostalgia-90s"
+    ]
+  },
+  {
+    "id": "animation-hercules-1997",
+    "title": "Hercules",
+    "mediaType": "animation-film",
+    "releaseYear": 1997,
+    "genres": [
+      "adventure",
+      "comedy",
+      "fantasy"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "disney",
+      "disney-renaissance",
+      "nostalgia-90s"
+    ]
+  },
+  {
+    "id": "animation-pocahontas-1995",
+    "title": "Pocahontas",
+    "mediaType": "animation-film",
+    "releaseYear": 1995,
+    "genres": [
+      "drama",
+      "romance",
+      "family"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "disney",
+      "disney-renaissance",
+      "nostalgia-90s"
+    ]
+  },
+  {
+    "id": "animation-the-hunchback-of-notre-dame-1996",
+    "title": "The Hunchback of Notre Dame",
+    "mediaType": "animation-film",
+    "releaseYear": 1996,
+    "genres": [
+      "drama",
+      "romance",
+      "family"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "disney",
+      "disney-renaissance",
+      "nostalgia-90s"
+    ]
+  },
+  {
+    "id": "animation-lilo-stitch-2002",
+    "title": "Lilo & Stitch",
+    "mediaType": "animation-film",
+    "releaseYear": 2002,
+    "genres": [
+      "comedy",
+      "family",
+      "science-fiction"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "disney",
+      "nostalgia-2000s"
+    ]
+  },
+  {
+    "id": "animation-the-emperor-s-new-groove-2000",
+    "title": "The Emperor's New Groove",
+    "mediaType": "animation-film",
+    "releaseYear": 2000,
+    "genres": [
+      "comedy",
+      "family"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "disney",
+      "nostalgia-2000s",
+      "cult"
+    ]
+  },
+  {
+    "id": "animation-atlantis-the-lost-empire-2001",
+    "title": "Atlantis: The Lost Empire",
+    "mediaType": "animation-film",
+    "releaseYear": 2001,
+    "genres": [
+      "adventure",
+      "science-fiction"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "disney",
+      "nostalgia-2000s",
+      "cult"
+    ]
+  },
+  {
+    "id": "animation-treasure-planet-2002",
+    "title": "Treasure Planet",
+    "mediaType": "animation-film",
+    "releaseYear": 2002,
+    "genres": [
+      "adventure",
+      "science-fiction"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "disney",
+      "nostalgia-2000s",
+      "cult"
+    ]
+  },
+  {
+    "id": "animation-brother-bear-2003",
+    "title": "Brother Bear",
+    "mediaType": "animation-film",
+    "releaseYear": 2003,
+    "genres": [
+      "adventure",
+      "drama",
+      "family"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "disney",
+      "nostalgia-2000s"
+    ]
+  },
+  {
+    "id": "animation-the-princess-and-the-frog-2009",
+    "title": "The Princess and the Frog",
+    "mediaType": "animation-film",
+    "releaseYear": 2009,
+    "genres": [
+      "fantasy",
+      "romance",
+      "family"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "disney",
+      "animation-classic"
+    ]
+  },
+  {
+    "id": "film-hocus-pocus-1993",
+    "title": "Hocus Pocus",
+    "mediaType": "film",
+    "releaseYear": 1993,
+    "genres": [
+      "comedy",
+      "fantasy",
+      "horror"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-90s",
+      "halloween-classic",
+      "cult"
+    ]
+  },
+  {
+    "id": "film-the-addams-family-1991",
+    "title": "The Addams Family",
+    "mediaType": "film",
+    "releaseYear": 1991,
+    "genres": [
+      "comedy",
+      "fantasy"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-90s",
+      "cult-classic"
+    ]
+  },
+  {
+    "id": "film-addams-family-values-1993",
+    "title": "Addams Family Values",
+    "mediaType": "film",
+    "releaseYear": 1993,
+    "genres": [
+      "comedy",
+      "fantasy"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-90s",
+      "cult-classic"
+    ]
+  },
+  {
+    "id": "film-casper-1995",
+    "title": "Casper",
+    "mediaType": "film",
+    "releaseYear": 1995,
+    "genres": [
+      "comedy",
+      "fantasy",
+      "family"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-90s",
+      "family-classic"
+    ]
+  },
+  {
+    "id": "film-jumanji-1995",
+    "title": "Jumanji",
+    "mediaType": "film",
+    "releaseYear": 1995,
+    "genres": [
+      "adventure",
+      "fantasy"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-90s",
+      "adventure-classic"
+    ]
+  },
+  {
+    "id": "film-matilda-1996",
+    "title": "Matilda",
+    "mediaType": "film",
+    "releaseYear": 1996,
+    "genres": [
+      "comedy",
+      "family",
+      "fantasy"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-90s",
+      "family-classic"
+    ]
+  },
+  {
+    "id": "film-the-craft-1996",
+    "title": "The Craft",
+    "mediaType": "film",
+    "releaseYear": 1996,
+    "genres": [
+      "horror",
+      "drama",
+      "fantasy"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-90s",
+      "cult",
+      "witchcraft"
+    ]
+  },
+  {
+    "id": "film-practical-magic-1998",
+    "title": "Practical Magic",
+    "mediaType": "film",
+    "releaseYear": 1998,
+    "genres": [
+      "romance",
+      "fantasy",
+      "drama"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-90s",
+      "cult",
+      "witchcraft"
+    ]
+  },
+  {
+    "id": "film-clueless-1995",
+    "title": "Clueless",
+    "mediaType": "film",
+    "releaseYear": 1995,
+    "genres": [
+      "comedy",
+      "romance"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-90s",
+      "teen-classic"
+    ]
+  },
+  {
+    "id": "film-10-things-i-hate-about-you-1999",
+    "title": "10 Things I Hate About You",
+    "mediaType": "film",
+    "releaseYear": 1999,
+    "genres": [
+      "comedy",
+      "romance"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-90s",
+      "teen-classic"
+    ]
+  },
+  {
+    "id": "film-scream-1996",
+    "title": "Scream",
+    "mediaType": "film",
+    "releaseYear": 1996,
+    "genres": [
+      "horror",
+      "mystery"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-90s",
+      "slasher-classic"
+    ]
+  },
+  {
+    "id": "film-the-mummy-1999",
+    "title": "The Mummy",
+    "mediaType": "film",
+    "releaseYear": 1999,
+    "genres": [
+      "adventure",
+      "fantasy",
+      "horror"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-90s",
+      "adventure-classic"
+    ]
+  },
+  {
+    "id": "film-jurassic-park-1993",
+    "title": "Jurassic Park",
+    "mediaType": "film",
+    "releaseYear": 1993,
+    "genres": [
+      "adventure",
+      "science-fiction"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-90s",
+      "blockbuster-classic"
+    ]
+  },
+  {
+    "id": "film-titanic-1997",
+    "title": "Titanic",
+    "mediaType": "film",
+    "releaseYear": 1997,
+    "genres": [
+      "drama",
+      "romance",
+      "history"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-90s",
+      "blockbuster-classic"
+    ]
+  },
+  {
+    "id": "film-the-matrix-1999",
+    "title": "The Matrix",
+    "mediaType": "film",
+    "releaseYear": 1999,
+    "genres": [
+      "science-fiction",
+      "action"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-90s",
+      "science-fiction-classic"
+    ]
+  },
+  {
+    "id": "film-the-lord-of-the-rings-the-fellowship-of-the-ring-2001",
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "mediaType": "film",
+    "releaseYear": 2001,
+    "genres": [
+      "adventure",
+      "fantasy"
+    ],
+    "country": "New Zealand; United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-2000s",
+      "fantasy-classic"
+    ]
+  },
+  {
+    "id": "film-harry-potter-and-the-philosopher-s-stone-2001",
+    "title": "Harry Potter and the Philosopher's Stone",
+    "mediaType": "film",
+    "releaseYear": 2001,
+    "genres": [
+      "adventure",
+      "fantasy"
+    ],
+    "country": "United Kingdom; United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-2000s",
+      "fantasy-classic"
+    ]
+  },
+  {
+    "id": "film-shrek-2001",
+    "title": "Shrek",
+    "mediaType": "film",
+    "releaseYear": 2001,
+    "genres": [
+      "adventure",
+      "comedy",
+      "fantasy"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-2000s",
+      "animation-classic"
+    ]
+  },
+  {
+    "id": "film-pirates-of-the-caribbean-the-curse-of-the-black-pearl-2003",
+    "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+    "mediaType": "film",
+    "releaseYear": 2003,
+    "genres": [
+      "adventure",
+      "fantasy"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-2000s",
+      "adventure-classic"
+    ]
+  },
+  {
+    "id": "film-mean-girls-2004",
+    "title": "Mean Girls",
+    "mediaType": "film",
+    "releaseYear": 2004,
+    "genres": [
+      "comedy",
+      "teen"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-2000s",
+      "teen-classic"
+    ]
+  },
+  {
+    "id": "film-freaky-friday-2003",
+    "title": "Freaky Friday",
+    "mediaType": "film",
+    "releaseYear": 2003,
+    "genres": [
+      "comedy",
+      "family"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-2000s",
+      "family-classic"
+    ]
+  },
+  {
+    "id": "film-13-going-on-30-2004",
+    "title": "13 Going on 30",
+    "mediaType": "film",
+    "releaseYear": 2004,
+    "genres": [
+      "comedy",
+      "romance"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-2000s",
+      "romantic-comedy"
+    ]
+  },
+  {
+    "id": "film-the-devil-wears-prada-2006",
+    "title": "The Devil Wears Prada",
+    "mediaType": "film",
+    "releaseYear": 2006,
+    "genres": [
+      "comedy",
+      "drama"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-2000s",
+      "modern-classic"
+    ]
+  },
+  {
+    "id": "film-coraline-2009",
+    "title": "Coraline",
+    "mediaType": "film",
+    "releaseYear": 2009,
+    "genres": [
+      "animation",
+      "fantasy",
+      "horror"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-2000s",
+      "dark-fantasy",
+      "cult"
+    ]
+  },
+  {
+    "id": "film-pan-s-labyrinth-2006",
+    "title": "Pan's Labyrinth",
+    "mediaType": "film",
+    "releaseYear": 2006,
+    "genres": [
+      "fantasy",
+      "drama",
+      "war"
+    ],
+    "country": "Spain; Mexico",
+    "language": "es",
+    "tags": [
+      "dark-fantasy",
+      "modern-classic"
+    ]
+  },
+  {
+    "id": "series-charmed-1998",
+    "title": "Charmed",
+    "mediaType": "tv-series",
+    "releaseYear": 1998,
+    "genres": [
+      "fantasy",
+      "drama",
+      "supernatural"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-90s",
+      "witchcraft",
+      "cult-series"
+    ]
+  },
+  {
+    "id": "series-american-horror-story-2011",
+    "title": "American Horror Story",
+    "mediaType": "tv-series",
+    "releaseYear": 2011,
+    "genres": [
+      "horror",
+      "drama",
+      "anthology"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "horror-series",
+      "cult-series"
+    ]
+  },
+  {
+    "id": "series-buffy-the-vampire-slayer-1997",
+    "title": "Buffy the Vampire Slayer",
+    "mediaType": "tv-series",
+    "releaseYear": 1997,
+    "genres": [
+      "fantasy",
+      "drama",
+      "horror"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-90s",
+      "cult-series",
+      "supernatural"
+    ]
+  },
+  {
+    "id": "series-sabrina-the-teenage-witch-1996",
+    "title": "Sabrina the Teenage Witch",
+    "mediaType": "tv-series",
+    "releaseYear": 1996,
+    "genres": [
+      "comedy",
+      "fantasy",
+      "family"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-90s",
+      "witchcraft",
+      "cult-series"
+    ]
+  },
+  {
+    "id": "series-the-x-files-1993",
+    "title": "The X-Files",
+    "mediaType": "tv-series",
+    "releaseYear": 1993,
+    "genres": [
+      "science-fiction",
+      "mystery",
+      "drama"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-90s",
+      "cult-series"
+    ]
+  },
+  {
+    "id": "series-friends-1994",
+    "title": "Friends",
+    "mediaType": "tv-series",
+    "releaseYear": 1994,
+    "genres": [
+      "comedy",
+      "romance"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-90s",
+      "classic-series"
+    ]
+  },
+  {
+    "id": "series-the-fresh-prince-of-bel-air-1990",
+    "title": "The Fresh Prince of Bel-Air",
+    "mediaType": "tv-series",
+    "releaseYear": 1990,
+    "genres": [
+      "comedy"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-90s",
+      "classic-series"
+    ]
+  },
+  {
+    "id": "series-supernatural-2005",
+    "title": "Supernatural",
+    "mediaType": "tv-series",
+    "releaseYear": 2005,
+    "genres": [
+      "horror",
+      "fantasy",
+      "drama"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-2000s",
+      "cult-series",
+      "supernatural"
+    ]
+  },
+  {
+    "id": "series-lost-2004",
+    "title": "Lost",
+    "mediaType": "tv-series",
+    "releaseYear": 2004,
+    "genres": [
+      "drama",
+      "mystery",
+      "science-fiction"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-2000s",
+      "cult-series"
+    ]
+  },
+  {
+    "id": "series-grey-s-anatomy-2005",
+    "title": "Grey's Anatomy",
+    "mediaType": "tv-series",
+    "releaseYear": 2005,
+    "genres": [
+      "drama",
+      "romance"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-2000s",
+      "long-running-series"
+    ]
+  },
+  {
+    "id": "series-the-vampire-diaries-2009",
+    "title": "The Vampire Diaries",
+    "mediaType": "tv-series",
+    "releaseYear": 2009,
+    "genres": [
+      "drama",
+      "fantasy",
+      "romance"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "nostalgia-2000s",
+      "supernatural",
+      "cult-series"
+    ]
+  },
+  {
+    "id": "series-stranger-things-2016",
+    "title": "Stranger Things",
+    "mediaType": "tv-series",
+    "releaseYear": 2016,
+    "genres": [
+      "science-fiction",
+      "horror",
+      "drama"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "netflix-original",
+      "streaming-hit",
+      "cult-series"
+    ]
+  },
+  {
+    "id": "series-wednesday-2022",
+    "title": "Wednesday",
+    "mediaType": "tv-series",
+    "releaseYear": 2022,
+    "genres": [
+      "comedy",
+      "fantasy",
+      "mystery"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "netflix-original",
+      "streaming-hit",
+      "gothic"
+    ]
+  },
+  {
+    "id": "series-squid-game-2021",
+    "title": "Squid Game",
+    "mediaType": "tv-series",
+    "releaseYear": 2021,
+    "genres": [
+      "thriller",
+      "drama"
+    ],
+    "country": "South Korea",
+    "language": "ko",
+    "tags": [
+      "netflix-original",
+      "streaming-hit"
+    ]
+  },
+  {
+    "id": "series-dark-2017",
+    "title": "Dark",
+    "mediaType": "tv-series",
+    "releaseYear": 2017,
+    "genres": [
+      "science-fiction",
+      "mystery",
+      "thriller"
+    ],
+    "country": "Germany",
+    "language": "de",
+    "tags": [
+      "netflix-original",
+      "cult-series"
+    ]
+  },
+  {
+    "id": "series-the-queen-s-gambit-2020",
+    "title": "The Queen's Gambit",
+    "mediaType": "tv-series",
+    "releaseYear": 2020,
+    "genres": [
+      "drama"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "netflix-original",
+      "limited-series"
+    ]
+  },
+  {
+    "id": "series-bridgerton-2020",
+    "title": "Bridgerton",
+    "mediaType": "tv-series",
+    "releaseYear": 2020,
+    "genres": [
+      "drama",
+      "romance"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "netflix-original",
+      "streaming-hit"
+    ]
+  },
+  {
+    "id": "series-the-crown-2016",
+    "title": "The Crown",
+    "mediaType": "tv-series",
+    "releaseYear": 2016,
+    "genres": [
+      "drama",
+      "history"
+    ],
+    "country": "United Kingdom",
+    "language": "en",
+    "tags": [
+      "netflix-original",
+      "award-winning"
+    ]
+  },
+  {
+    "id": "series-black-mirror-2011",
+    "title": "Black Mirror",
+    "mediaType": "tv-series",
+    "releaseYear": 2011,
+    "genres": [
+      "science-fiction",
+      "drama",
+      "anthology"
+    ],
+    "country": "United Kingdom",
+    "language": "en",
+    "tags": [
+      "netflix-original",
+      "anthology",
+      "cult-series"
+    ]
+  },
+  {
+    "id": "series-money-heist-2017",
+    "title": "Money Heist",
+    "mediaType": "tv-series",
+    "releaseYear": 2017,
+    "genres": [
+      "crime",
+      "drama",
+      "thriller"
+    ],
+    "country": "Spain",
+    "language": "es",
+    "tags": [
+      "netflix-original",
+      "streaming-hit"
+    ]
+  },
+  {
+    "id": "series-orange-is-the-new-black-2013",
+    "title": "Orange Is the New Black",
+    "mediaType": "tv-series",
+    "releaseYear": 2013,
+    "genres": [
+      "comedy",
+      "drama",
+      "crime"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "netflix-original",
+      "classic-series"
+    ]
+  },
+  {
+    "id": "series-the-witcher-2019",
+    "title": "The Witcher",
+    "mediaType": "tv-series",
+    "releaseYear": 2019,
+    "genres": [
+      "fantasy",
+      "drama",
+      "adventure"
+    ],
+    "country": "United States; Poland",
+    "language": "en",
+    "tags": [
+      "netflix-original",
+      "fantasy-series"
+    ]
+  },
+  {
+    "id": "animated-series-arcane-2021",
+    "title": "Arcane",
+    "mediaType": "animated-series",
+    "releaseYear": 2021,
+    "genres": [
+      "animation",
+      "fantasy",
+      "action"
+    ],
+    "country": "United States; France",
+    "language": "en",
+    "tags": [
+      "netflix-original",
+      "widely-acclaimed"
+    ]
+  },
+  {
+    "id": "animated-series-bojack-horseman-2014",
+    "title": "BoJack Horseman",
+    "mediaType": "animated-series",
+    "releaseYear": 2014,
+    "genres": [
+      "animation",
+      "comedy",
+      "drama"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "netflix-original",
+      "cult-series"
+    ]
+  },
+  {
+    "id": "animated-series-blue-eye-samurai-2023",
+    "title": "Blue Eye Samurai",
+    "mediaType": "animated-series",
+    "releaseYear": 2023,
+    "genres": [
+      "animation",
+      "action",
+      "drama"
+    ],
+    "country": "United States; France",
+    "language": "en",
+    "tags": [
+      "netflix-original",
+      "widely-acclaimed"
+    ]
   }
 ]
