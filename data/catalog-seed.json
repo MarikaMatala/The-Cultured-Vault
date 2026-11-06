@@ -1,0 +1,222 @@
+[
+  {
+    "id": "film-the-godfather-1972",
+    "title": "The Godfather",
+    "mediaType": "film",
+    "releaseYear": 1972,
+    "genres": [
+      "crime",
+      "drama"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "classic",
+      "widely-acclaimed"
+    ]
+  },
+  {
+    "id": "film-spirited-away-2001",
+    "title": "Spirited Away",
+    "originalTitle": "千と千尋の神隠し",
+    "mediaType": "animation-film",
+    "releaseYear": 2001,
+    "genres": [
+      "adventure",
+      "fantasy"
+    ],
+    "country": "Japan",
+    "language": "ja",
+    "tags": [
+      "animation",
+      "widely-acclaimed"
+    ]
+  },
+  {
+    "id": "film-parasite-2019",
+    "title": "Parasite",
+    "originalTitle": "기생충",
+    "mediaType": "film",
+    "releaseYear": 2019,
+    "genres": [
+      "thriller",
+      "drama"
+    ],
+    "country": "South Korea",
+    "language": "ko",
+    "tags": [
+      "modern-classic",
+      "widely-acclaimed"
+    ]
+  },
+  {
+    "id": "film-blade-runner-1982",
+    "title": "Blade Runner",
+    "mediaType": "film",
+    "releaseYear": 1982,
+    "genres": [
+      "science-fiction",
+      "neo-noir"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "cult",
+      "influential"
+    ]
+  },
+  {
+    "id": "series-twin-peaks-1990",
+    "title": "Twin Peaks",
+    "mediaType": "tv-series",
+    "releaseYear": 1990,
+    "genres": [
+      "mystery",
+      "drama"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "cult",
+      "influential"
+    ]
+  },
+  {
+    "id": "series-the-wire-2002",
+    "title": "The Wire",
+    "mediaType": "tv-series",
+    "releaseYear": 2002,
+    "genres": [
+      "crime",
+      "drama"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "widely-acclaimed"
+    ]
+  },
+  {
+    "id": "series-over-the-garden-wall-2014",
+    "title": "Over the Garden Wall",
+    "mediaType": "animated-series",
+    "releaseYear": 2014,
+    "genres": [
+      "adventure",
+      "fantasy"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "animation",
+      "cult"
+    ]
+  },
+  {
+    "id": "documentary-the-act-of-killing-2012",
+    "title": "The Act of Killing",
+    "mediaType": "documentary",
+    "releaseYear": 2012,
+    "genres": [
+      "history",
+      "politics"
+    ],
+    "country": "Denmark; Norway; United Kingdom",
+    "language": "en",
+    "tags": [
+      "documentary",
+      "widely-acclaimed"
+    ]
+  },
+  {
+    "id": "album-dark-side-of-the-moon-1973",
+    "title": "The Dark Side of the Moon",
+    "artist": "Pink Floyd",
+    "mediaType": "music-album",
+    "releaseYear": 1973,
+    "genres": [
+      "progressive-rock"
+    ],
+    "country": "United Kingdom",
+    "tags": [
+      "landmark-album"
+    ]
+  },
+  {
+    "id": "album-songs-for-the-deaf-2002",
+    "title": "Songs for the Deaf",
+    "artist": "Queens of the Stone Age",
+    "mediaType": "music-album",
+    "releaseYear": 2002,
+    "genres": [
+      "alternative-rock",
+      "stoner-rock"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "landmark-album"
+    ]
+  },
+  {
+    "id": "album-disintegration-1989",
+    "title": "Disintegration",
+    "artist": "The Cure",
+    "mediaType": "music-album",
+    "releaseYear": 1989,
+    "genres": [
+      "gothic-rock",
+      "alternative-rock"
+    ],
+    "country": "United Kingdom",
+    "language": "en",
+    "tags": [
+      "landmark-album"
+    ]
+  },
+  {
+    "id": "podcast-99-percent-invisible",
+    "title": "99% Invisible",
+    "mediaType": "podcast",
+    "genres": [
+      "design",
+      "architecture",
+      "culture"
+    ],
+    "language": "en",
+    "tags": [
+      "podcast",
+      "discovery"
+    ]
+  },
+  {
+    "id": "game-journey-2012",
+    "title": "Journey",
+    "mediaType": "video-game",
+    "releaseYear": 2012,
+    "genres": [
+      "adventure",
+      "art-game"
+    ],
+    "country": "United States",
+    "tags": [
+      "interactive-art",
+      "discovery"
+    ]
+  },
+  {
+    "id": "book-the-left-hand-of-darkness-1969",
+    "title": "The Left Hand of Darkness",
+    "author": "Ursula K. Le Guin",
+    "mediaType": "book",
+    "releaseYear": 1969,
+    "genres": [
+      "science-fiction"
+    ],
+    "country": "United States",
+    "language": "en",
+    "tags": [
+      "literary-classic"
+    ]
+  }
+]
