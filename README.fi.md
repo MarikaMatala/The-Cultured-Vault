@@ -22,7 +22,7 @@ Projektissa pidetään erillään kolme näkökulmaa: asennuksen ylläpitäjän 
 
 ### Vaatimukset
 
-- Node.js 20.9 tai uudempi (Node.js 26 LTS on suositeltu).
+- Node.js 20.19 tai uudempi (Node.js 26 LTS on suositeltu).
 - npm, joka tulee Node.js:n mukana.
 - Python 3.11 tai uudempi vain, jos haluat käyttää nykyistä Python-katalogivalidointia ja Python-yksikkötestejä.
 

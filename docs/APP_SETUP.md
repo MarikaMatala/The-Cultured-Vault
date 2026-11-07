@@ -4,7 +4,7 @@ The repository now includes a runnable Next.js application scaffold. The current
 
 ## Requirements
 
-- Node.js 20.9 or newer (the minimum supported by Next.js 16). Node.js 26 LTS is recommended.
+- Node.js 20.19 or newer (required by the current ESLint 10 toolchain). Node.js 26 LTS is recommended.
 - npm (included with Node.js).
 - Python 3.11 or newer only if you also want to run the existing Python catalogue validator and unit tests.
 
