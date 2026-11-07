@@ -383,7 +383,7 @@ export function VaultApp({ config, entries }: VaultAppProps) {
           </div>
           <div className="footer-links">
             <a
-              href="https://github.com/MarikaMatala/The-Cultured-Vault"
+              href={config.sourceUrl}
               target="_blank"
               rel="noreferrer"
             >

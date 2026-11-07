@@ -35,6 +35,8 @@ Only public presentation settings are read by this scaffold:
 | `NEXT_PUBLIC_APP_NAME`       | Name shown in the header, footer and metadata | The Cultured Vault                                    |
 | `NEXT_PUBLIC_APP_TAGLINE`    | Short instance tagline                        | Culture worth discovering. Stories worth remembering. |
 | `NEXT_PUBLIC_DEFAULT_LOCALE` | Initial interface language: `en` or `fi`      | `en`                                                  |
+| `NEXT_PUBLIC_BRAND_MONOGRAM` | One-to-three character mark used in the interface | `CV` |
+| `NEXT_PUBLIC_SOURCE_URL` | Optional source-code link for this fork; empty uses the upstream repository | Upstream repository |
 | `NEXT_PUBLIC_BRAND_BRONZE`   | Bronze accent as a six-digit hex colour       | `#b97b48`                                             |
 | `NEXT_PUBLIC_BRAND_SILVER`   | Silver accent as a six-digit hex colour       | `#c7cbd0`                                             |
 | `NEXT_PUBLIC_BRAND_GOLD`     | Gold accent as a six-digit hex colour         | `#e2bd6f`                                             |

@@ -87,6 +87,8 @@ Copy `.env.example` to `.env.local` and change the public presentation values:
 | `NEXT_PUBLIC_APP_NAME`       | Instance name                       |
 | `NEXT_PUBLIC_APP_TAGLINE`    | Instance tagline                    |
 | `NEXT_PUBLIC_DEFAULT_LOCALE` | Initial language: `en` or `fi`      |
+| `NEXT_PUBLIC_BRAND_MONOGRAM` | Short one-to-three character brand mark |
+| `NEXT_PUBLIC_SOURCE_URL` | Optional source-code URL for this fork; empty uses the upstream repository |
 | `NEXT_PUBLIC_BRAND_BRONZE`   | Bronze accent colour, six-digit hex |
 | `NEXT_PUBLIC_BRAND_SILVER`   | Silver accent colour, six-digit hex |
 | `NEXT_PUBLIC_BRAND_GOLD`     | Gold accent colour, six-digit hex   |

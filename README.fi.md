@@ -87,6 +87,8 @@ Kopioi `.env.example` tiedostoksi `.env.local` ja muuta julkisen käyttöliittym
 | `NEXT_PUBLIC_APP_NAME`       | Asennuksen nimi                              |
 | `NEXT_PUBLIC_APP_TAGLINE`    | Asennuksen lyhyt tunnuslause                 |
 | `NEXT_PUBLIC_DEFAULT_LOCALE` | Oletuskieli: `en` tai `fi`                   |
+| `NEXT_PUBLIC_BRAND_MONOGRAM` | Yhden–kolmen merkin bränditunnus |
+| `NEXT_PUBLIC_SOURCE_URL` | Forkin lähdekoodilinkki; tyhjänä käytetään alkuperäistä repositoriota |
 | `NEXT_PUBLIC_BRAND_BRONZE`   | Pronssinen korostusväri, kuusinumeroinen hex |
 | `NEXT_PUBLIC_BRAND_SILVER`   | Hopeinen korostusväri, kuusinumeroinen hex   |
 | `NEXT_PUBLIC_BRAND_GOLD`     | Kultainen korostusväri, kuusinumeroinen hex  |
