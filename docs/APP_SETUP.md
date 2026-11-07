@@ -4,7 +4,7 @@ The repository now includes a runnable Next.js application scaffold. The current
 
 ## Requirements
 
-- Node.js 24 or newer. Node.js 26 LTS is the recommended development runtime.
+- Node.js 20.9 or newer (the minimum supported by Next.js 16). Node.js 26 LTS is recommended.
 - npm (included with Node.js).
 - Python 3.11 or newer only if you also want to run the existing Python catalogue validator and unit tests.
 
