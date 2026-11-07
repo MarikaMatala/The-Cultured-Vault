@@ -3,6 +3,7 @@ import type { Locale } from "./config";
 export const messages = {
   en: {
     brandKicker: "OPEN CULTURE ARCHIVE",
+    vaultSealCaption: "OPEN ARCHIVE",
     navLabel: "Main navigation",
     skipToCatalogue: "Skip to catalogue",
     catalogueOverview: "Catalogue overview",
@@ -90,6 +91,7 @@ export const messages = {
   },
   fi: {
     brandKicker: "AVOIN KULTTUURIARKISTO",
+    vaultSealCaption: "AVOIN ARKISTO",
     navLabel: "Päänavigaatio",
     skipToCatalogue: "Siirry katalogiin",
     catalogueOverview: "Katalogin yhteenveto",

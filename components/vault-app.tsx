@@ -130,7 +130,7 @@ export function VaultApp({ config, entries }: VaultAppProps) {
         <div className="shell header-inner">
           <a className="brand" href="#top" aria-label={config.appName + " home"}>
             <span className="brand-mark" aria-hidden="true">
-              CV
+              {config.brandMonogram}
             </span>
             <span className="brand-copy">
               <strong>{config.appName}</strong>
@@ -203,8 +203,8 @@ export function VaultApp({ config, entries }: VaultAppProps) {
             <span className="vault-orbit vault-orbit-two" />
             <span className="vault-orbit vault-orbit-three" />
             <div className="vault-seal">
-              <strong>CV</strong>
-              <span>EST. 2026</span>
+              <strong>{config.brandMonogram}</strong>
+              <span>{t.vaultSealCaption}</span>
             </div>
           </div>
         </div>
