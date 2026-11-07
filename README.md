@@ -22,7 +22,7 @@ The project keeps three perspectives separate: the instance owner's editorial co
 
 ### Requirements
 
-- Node.js 24 or newer (Node.js 26 LTS is recommended).
+- Node.js 20.9 or newer (Node.js 26 LTS is recommended).
 - npm, included with Node.js.
 - Python 3.11 or newer only for the existing Python catalogue validator and Python unit tests.
 
