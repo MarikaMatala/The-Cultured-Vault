@@ -61,35 +61,35 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 
 ## What the scaffold includes
 
-| Path | Purpose |
-| --- | --- |
-| `app/` | Next.js App Router, root layout and global design system |
+| Path                       | Purpose                                                     |
+| -------------------------- | ----------------------------------------------------------- |
+| `app/`                     | Next.js App Router, root layout and global design system    |
 | `components/vault-app.tsx` | Responsive catalogue interface and Finnish/English switcher |
-| `lib/catalogue.ts` | Read-only catalogue source interface and JSON adapter |
-| `lib/config.ts` | Public instance branding and initial-language configuration |
-| `lib/i18n.ts` | Finnish and English interface dictionaries |
-| `data/catalog-seed.json` | Public editorial starter catalogue (93 sample works) |
-| `tests/catalogue.test.mjs` | Node.js tests for starter catalogue integrity |
-| `src/cultured_vault/` | Python catalogue validation and normalization utilities |
-| `supabase/migrations/` | PostgreSQL schema and row-level security foundations |
-| `docs/APP_SETUP.md` | Application setup and configuration reference |
-| `docs/PROJECT_VISION.md` | Product vision and experience principles |
-| `docs/DATA_MODEL.md` | Proposed relational data model |
-| `docs/BACKEND_PLAN.md` | Backend implementation plan |
-| `docs/ROADMAP.md` | Planned development stages |
+| `lib/catalogue.ts`         | Read-only catalogue source interface and JSON adapter       |
+| `lib/config.ts`            | Public instance branding and initial-language configuration |
+| `lib/i18n.ts`              | Finnish and English interface dictionaries                  |
+| `data/catalog-seed.json`   | Public editorial starter catalogue (93 sample works)        |
+| `tests/catalogue.test.mjs` | Node.js tests for starter catalogue integrity               |
+| `src/cultured_vault/`      | Python catalogue validation and normalization utilities     |
+| `supabase/migrations/`     | PostgreSQL schema and row-level security foundations        |
+| `docs/APP_SETUP.md`        | Application setup and configuration reference               |
+| `docs/PROJECT_VISION.md`   | Product vision and experience principles                    |
+| `docs/DATA_MODEL.md`       | Proposed relational data model                              |
+| `docs/BACKEND_PLAN.md`     | Backend implementation plan                                 |
+| `docs/ROADMAP.md`          | Planned development stages                                  |
 
 ## Configure your own instance
 
 Copy `.env.example` to `.env.local` and change the public presentation values:
 
-| Variable | Purpose |
-| --- | --- |
-| `NEXT_PUBLIC_APP_NAME` | Instance name |
-| `NEXT_PUBLIC_APP_TAGLINE` | Instance tagline |
-| `NEXT_PUBLIC_DEFAULT_LOCALE` | Initial language: `en` or `fi` |
-| `NEXT_PUBLIC_BRAND_BRONZE` | Bronze accent colour, six-digit hex |
-| `NEXT_PUBLIC_BRAND_SILVER` | Silver accent colour, six-digit hex |
-| `NEXT_PUBLIC_BRAND_GOLD` | Gold accent colour, six-digit hex |
+| Variable                     | Purpose                             |
+| ---------------------------- | ----------------------------------- |
+| `NEXT_PUBLIC_APP_NAME`       | Instance name                       |
+| `NEXT_PUBLIC_APP_TAGLINE`    | Instance tagline                    |
+| `NEXT_PUBLIC_DEFAULT_LOCALE` | Initial language: `en` or `fi`      |
+| `NEXT_PUBLIC_BRAND_BRONZE`   | Bronze accent colour, six-digit hex |
+| `NEXT_PUBLIC_BRAND_SILVER`   | Silver accent colour, six-digit hex |
+| `NEXT_PUBLIC_BRAND_GOLD`     | Gold accent colour, six-digit hex   |
 
 These variables are public and become part of the browser bundle. Do not put secrets in them. Database, authentication and external metadata integrations are not wired to the app yet, so no service credentials are needed. When those integrations are implemented, each operator must configure their own server-side credentials; privileged keys must never be exposed to the browser.
 

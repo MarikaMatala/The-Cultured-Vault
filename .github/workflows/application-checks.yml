@@ -24,17 +24,6 @@ jobs:
       - name: Install application dependencies
         run: npm install --no-audit --no-fund
 
-      - name: Format source files
-        run: npm run format
-
-      - name: Export formatted source for review
-        run: |
-          for file in app/globals.css components/vault-app.tsx tsconfig.json docs/APP_SETUP.md README.md README.fi.md; do
-            printf 'FORMATTED_FILE:%s\\n' "$file"
-            base64 -w0 "$file"
-            printf '\\n'
-          done
-
       - name: Run formatting, lint, type and catalogue tests
         run: npm run check
 

@@ -123,6 +123,9 @@ export function VaultApp({ config, entries }: VaultAppProps) {
 
   return (
     <main id="top" className="min-h-screen">
+      <a className="skip-link" href="#catalogue">
+        {t.skipToCatalogue}
+      </a>
       <header className="site-header">
         <div className="shell header-inner">
           <a className="brand" href="#top" aria-label={config.appName + " home"}>
@@ -143,18 +146,10 @@ export function VaultApp({ config, entries }: VaultAppProps) {
 
           <div className="header-actions">
             <div className="locale-switch" role="group" aria-label={t.language}>
-              <button
-                type="button"
-                aria-pressed={locale === "en"}
-                onClick={() => setLocale("en")}
-              >
+              <button type="button" aria-pressed={locale === "en"} onClick={() => setLocale("en")}>
                 EN
               </button>
-              <button
-                type="button"
-                aria-pressed={locale === "fi"}
-                onClick={() => setLocale("fi")}
-              >
+              <button type="button" aria-pressed={locale === "fi"} onClick={() => setLocale("fi")}>
                 FI
               </button>
             </div>
@@ -186,7 +181,7 @@ export function VaultApp({ config, entries }: VaultAppProps) {
             </a>
           </div>
 
-          <div className="hero-stats" aria-label="Catalogue overview">
+          <div className="hero-stats" aria-label={t.catalogueOverview}>
             <div className="hero-stat">
               <strong>{entries.length}</strong>
               <span>{t.statsWorks}</span>
@@ -216,7 +211,7 @@ export function VaultApp({ config, entries }: VaultAppProps) {
       </section>
 
       <div className="shell">
-        <aside className="sample-notice" aria-label="Demo data notice">
+        <aside className="sample-notice" aria-label={t.sampleNoticeLabel}>
           <span className="status-dot" aria-hidden="true" />
           <span>{t.sampleNotice}</span>
         </aside>
@@ -387,7 +382,11 @@ export function VaultApp({ config, entries }: VaultAppProps) {
             <p className="footer-description">{t.footerDescription}</p>
           </div>
           <div className="footer-links">
-            <a href="https://github.com/MarikaMatala/The-Cultured-Vault" target="_blank" rel="noreferrer">
+            <a
+              href="https://github.com/MarikaMatala/The-Cultured-Vault"
+              target="_blank"
+              rel="noreferrer"
+            >
               {t.sourceCode}
             </a>
             <a href="https://opensource.org/license/mit/" target="_blank" rel="noreferrer">

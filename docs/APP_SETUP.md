@@ -30,14 +30,14 @@ Open http://localhost:3000. The app uses built-in defaults if `.env.local` is ab
 
 Only public presentation settings are read by this scaffold:
 
-| Variable | Purpose | Default |
-| --- | --- | --- |
-| `NEXT_PUBLIC_APP_NAME` | Name shown in the header, footer and metadata | The Cultured Vault |
-| `NEXT_PUBLIC_APP_TAGLINE` | Short instance tagline | Culture worth discovering. Stories worth remembering. |
-| `NEXT_PUBLIC_DEFAULT_LOCALE` | Initial interface language: `en` or `fi` | `en` |
-| `NEXT_PUBLIC_BRAND_BRONZE` | Bronze accent as a six-digit hex colour | `#b97b48` |
-| `NEXT_PUBLIC_BRAND_SILVER` | Silver accent as a six-digit hex colour | `#c7cbd0` |
-| `NEXT_PUBLIC_BRAND_GOLD` | Gold accent as a six-digit hex colour | `#e2bd6f` |
+| Variable                     | Purpose                                       | Default                                               |
+| ---------------------------- | --------------------------------------------- | ----------------------------------------------------- |
+| `NEXT_PUBLIC_APP_NAME`       | Name shown in the header, footer and metadata | The Cultured Vault                                    |
+| `NEXT_PUBLIC_APP_TAGLINE`    | Short instance tagline                        | Culture worth discovering. Stories worth remembering. |
+| `NEXT_PUBLIC_DEFAULT_LOCALE` | Initial interface language: `en` or `fi`      | `en`                                                  |
+| `NEXT_PUBLIC_BRAND_BRONZE`   | Bronze accent as a six-digit hex colour       | `#b97b48`                                             |
+| `NEXT_PUBLIC_BRAND_SILVER`   | Silver accent as a six-digit hex colour       | `#c7cbd0`                                             |
+| `NEXT_PUBLIC_BRAND_GOLD`     | Gold accent as a six-digit hex colour         | `#e2bd6f`                                             |
 
 These are public values and are compiled into the browser bundle. Never put credentials, private profile data or API keys in a `NEXT_PUBLIC_*` variable. The language switcher currently supports Finnish and English; the environment variable chooses the initial language.
 

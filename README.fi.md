@@ -61,35 +61,35 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 
 ## Mitä sovellusranko sisältää?
 
-| Polku | Tarkoitus |
-| --- | --- |
-| `app/` | Next.js App Router, juuriasettelu ja globaali design-järjestelmä |
-| `components/vault-app.tsx` | Responsiivinen kataloginäkymä ja FI/EN-kielenvaihto |
-| `lib/catalogue.ts` | Katalogin lähderajapinta ja vain luku -JSON-sovitin |
-| `lib/config.ts` | Asennuksen julkisen brändin ja oletuskielen asetukset |
-| `lib/i18n.ts` | Suomen- ja englanninkieliset käyttöliittymätekstit |
-| `data/catalog-seed.json` | Julkinen toimituksellinen aloituskatalogi (93 esimerkkiteosta) |
-| `tests/catalogue.test.mjs` | Node.js-testit aloituskatalogin eheydelle |
-| `src/cultured_vault/` | Python-katalogin validointi- ja normalisointityökalut |
-| `supabase/migrations/` | PostgreSQL-skeema ja rivitason käyttöoikeuksien perustat |
-| `docs/APP_SETUP.md` | Sovelluksen käyttöönotto- ja asetusohje |
-| `docs/PROJECT_VISION.md` | Projektin visio ja käyttökokemuksen periaatteet |
-| `docs/DATA_MODEL.md` | Ehdotus relaatiotietomalliksi |
-| `docs/BACKEND_PLAN.md` | Backendin toteutussuunnitelma |
-| `docs/ROADMAP.md` | Kehityksen vaiheet |
+| Polku                      | Tarkoitus                                                        |
+| -------------------------- | ---------------------------------------------------------------- |
+| `app/`                     | Next.js App Router, juuriasettelu ja globaali design-järjestelmä |
+| `components/vault-app.tsx` | Responsiivinen kataloginäkymä ja FI/EN-kielenvaihto              |
+| `lib/catalogue.ts`         | Katalogin lähderajapinta ja vain luku -JSON-sovitin              |
+| `lib/config.ts`            | Asennuksen julkisen brändin ja oletuskielen asetukset            |
+| `lib/i18n.ts`              | Suomen- ja englanninkieliset käyttöliittymätekstit               |
+| `data/catalog-seed.json`   | Julkinen toimituksellinen aloituskatalogi (93 esimerkkiteosta)   |
+| `tests/catalogue.test.mjs` | Node.js-testit aloituskatalogin eheydelle                        |
+| `src/cultured_vault/`      | Python-katalogin validointi- ja normalisointityökalut            |
+| `supabase/migrations/`     | PostgreSQL-skeema ja rivitason käyttöoikeuksien perustat         |
+| `docs/APP_SETUP.md`        | Sovelluksen käyttöönotto- ja asetusohje                          |
+| `docs/PROJECT_VISION.md`   | Projektin visio ja käyttökokemuksen periaatteet                  |
+| `docs/DATA_MODEL.md`       | Ehdotus relaatiotietomalliksi                                    |
+| `docs/BACKEND_PLAN.md`     | Backendin toteutussuunnitelma                                    |
+| `docs/ROADMAP.md`          | Kehityksen vaiheet                                               |
 
 ## Oman asennuksen määrittäminen
 
 Kopioi `.env.example` tiedostoksi `.env.local` ja muuta julkisen käyttöliittymän asetuksia:
 
-| Muuttuja | Tarkoitus |
-| --- | --- |
-| `NEXT_PUBLIC_APP_NAME` | Asennuksen nimi |
-| `NEXT_PUBLIC_APP_TAGLINE` | Asennuksen lyhyt tunnuslause |
-| `NEXT_PUBLIC_DEFAULT_LOCALE` | Oletuskieli: `en` tai `fi` |
-| `NEXT_PUBLIC_BRAND_BRONZE` | Pronssinen korostusväri, kuusinumeroinen hex |
-| `NEXT_PUBLIC_BRAND_SILVER` | Hopeinen korostusväri, kuusinumeroinen hex |
-| `NEXT_PUBLIC_BRAND_GOLD` | Kultainen korostusväri, kuusinumeroinen hex |
+| Muuttuja                     | Tarkoitus                                    |
+| ---------------------------- | -------------------------------------------- |
+| `NEXT_PUBLIC_APP_NAME`       | Asennuksen nimi                              |
+| `NEXT_PUBLIC_APP_TAGLINE`    | Asennuksen lyhyt tunnuslause                 |
+| `NEXT_PUBLIC_DEFAULT_LOCALE` | Oletuskieli: `en` tai `fi`                   |
+| `NEXT_PUBLIC_BRAND_BRONZE`   | Pronssinen korostusväri, kuusinumeroinen hex |
+| `NEXT_PUBLIC_BRAND_SILVER`   | Hopeinen korostusväri, kuusinumeroinen hex   |
+| `NEXT_PUBLIC_BRAND_GOLD`     | Kultainen korostusväri, kuusinumeroinen hex  |
 
 Nämä arvot ovat julkisia ja päätyvät selaimelle toimitettavaan koodiin. Älä lisää niihin salaisuuksia. Tietokantaa, tunnistautumista tai ulkoisia metatietopalveluja ei ole vielä yhdistetty sovellukseen, joten palvelutunnuksia ei tarvita. Kun integraatiot toteutetaan, jokaisen ylläpitäjän tulee määrittää omat palvelinpuolen tunnuksensa. Ylläpitäjän oikeuksilla toimivia avaimia ei saa koskaan tuoda selaimelle.
 

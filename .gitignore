@@ -22,6 +22,8 @@
 
 # Local service data
 .supabase/
+supabase/.temp/
+supabase/.branches/
 .vercel/
 
 # Python

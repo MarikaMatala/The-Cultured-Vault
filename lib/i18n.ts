@@ -4,6 +4,9 @@ export const messages = {
   en: {
     brandKicker: "OPEN CULTURE ARCHIVE",
     navLabel: "Main navigation",
+    skipToCatalogue: "Skip to catalogue",
+    catalogueOverview: "Catalogue overview",
+    sampleNoticeLabel: "Demo data notice",
     explore: "Explore",
     about: "About",
     projectStatus: "Project status",
@@ -88,6 +91,9 @@ export const messages = {
   fi: {
     brandKicker: "AVOIN KULTTUURIARKISTO",
     navLabel: "Päänavigaatio",
+    skipToCatalogue: "Siirry katalogiin",
+    catalogueOverview: "Katalogin yhteenveto",
+    sampleNoticeLabel: "Huomautus esimerkkidatasta",
     explore: "Selaa",
     about: "Tietoa",
     projectStatus: "Projektin tila",
