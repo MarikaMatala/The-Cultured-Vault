@@ -24,7 +24,7 @@ function safeMonogram(value: string | undefined, fallback: string): string {
 function safeSourceUrl(value: string | undefined, fallback: string): string {
   try {
     const url = new URL(value || fallback);
-    return url.protocol === "https:" ? url.toString().replace(/\\/$/, "") : fallback;
+    return url.protocol === "https:" ? url.toString() : fallback;
   } catch {
     return fallback;
   }
