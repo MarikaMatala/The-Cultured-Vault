@@ -24,6 +24,12 @@ jobs:
       - name: Install application dependencies
         run: npm install --no-audit --no-fund
 
+      - name: Export generated npm lockfile
+        run: |
+          printf 'LOCKFILE_START\\n'
+          base64 -w0 package-lock.json
+          printf '\\nLOCKFILE_END\\n'
+
       - name: Run formatting, lint, type and catalogue tests
         run: npm run check
 
