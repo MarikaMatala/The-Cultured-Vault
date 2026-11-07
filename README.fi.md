@@ -32,7 +32,7 @@ Projektissa pidetään erillään kolme näkökulmaa: asennuksen ylläpitäjän 
 git clone https://github.com/MarikaMatala/The-Cultured-Vault.git
 cd The-Cultured-Vault
 cp .env.example .env.local
-npm install
+npm ci
 npm run dev
 ```
 

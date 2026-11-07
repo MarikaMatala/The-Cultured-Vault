@@ -32,7 +32,7 @@ The project keeps three perspectives separate: the instance owner's editorial co
 git clone https://github.com/MarikaMatala/The-Cultured-Vault.git
 cd The-Cultured-Vault
 cp .env.example .env.local
-npm install
+npm ci
 npm run dev
 ```
 

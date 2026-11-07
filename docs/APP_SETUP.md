@@ -14,7 +14,7 @@ From the repository root:
 
 ```bash
 cp .env.example .env.local
-npm install
+npm ci
 npm run dev
 ```
 

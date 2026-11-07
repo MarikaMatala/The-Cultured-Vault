@@ -14,21 +14,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7.0.1
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7.1.0
         with:
           node-version: "26.13.0"
+          cache: npm
 
       - name: Install application dependencies
-        run: npm install --no-audit --no-fund
-
-      - name: Export generated npm lockfile
-        run: |
-          printf 'LOCKFILE_START\\n'
-          base64 -w0 package-lock.json
-          printf '\\nLOCKFILE_END\\n'
+        run: npm ci --no-audit --no-fund
 
       - name: Run formatting, lint, type and catalogue tests
         run: npm run check
@@ -37,7 +32,7 @@ jobs:
         run: npm run build
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7.1.0
         with:
           python-version: "3.13"
 
