@@ -19,6 +19,7 @@ The Cultured Vault is a public open-source project. Contributions from developer
 You are welcome to fork this repository and adapt it for your own use under the terms of the MIT License.
 
 A fork or self-hosted deployment should use its own:
+
 - Application configuration and environment variables.
 - Database and authentication project.
 - API credentials and provider accounts.
@@ -30,6 +31,7 @@ Never use the original maintainer's private credentials, database, accounts or p
 ## Before opening an issue
 
 Please include:
+
 - A clear title.
 - What you expected to happen.
 - What actually happened, if reporting a bug.
@@ -46,13 +48,27 @@ For feature requests, explain the problem the feature would solve and how it mig
 3. Keep each pull request focused on one concern.
 4. Use descriptive branch names and commit messages.
 5. Update relevant documentation.
-6. Add or update tests when application code exists.
-7. Check formatting, linting and tests before requesting review.
+6. Add or update tests for the behaviour you change.
+7. Run the checks listed below before requesting review.
 8. Do not commit secrets, generated credentials, private data or copyrighted media files.
+
+## Local checks
+
+The current frontend scaffold requires Node.js 20.19 or newer and npm. From the repository root, run:
+
+```bash
+npm ci
+npm run check
+npm run build
+npm run validate:catalogue
+PYTHONPATH=src python -m unittest discover -s tests -v
+```
+
+The Python commands require Python 3.11 or newer. The application checks run Prettier, ESLint, TypeScript and the Node.js catalogue tests. The Python commands validate the starter catalogue and run the existing Python unit tests.
 
 ## Code and design expectations
 
-- Prefer readable, maintainable TypeScript when TypeScript is adopted.
+- Prefer readable, maintainable TypeScript.
 - Keep components and data access responsibilities clear.
 - Use semantic HTML and accessible interaction patterns.
 - Preserve responsive behaviour.
@@ -60,6 +76,7 @@ For feature requests, explain the problem the feature would solve and how it mig
 - Treat all user-generated content as untrusted input.
 - Do not introduce a new dependency without a clear reason.
 - Avoid hard-coding instance-specific names, URLs, credentials or owner IDs.
+- Keep personal ratings, private notes, account details and service credentials out of the public starter catalogue and source control.
 
 ## Licence
 
