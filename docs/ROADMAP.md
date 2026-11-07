@@ -10,29 +10,33 @@ This roadmap is a living plan. Items are not complete unless they are implemente
 - [x] Draft the initial roadmap.
 - [x] Draft the data model.
 - [x] Add a small sample catalogue dataset.
-- [ ] Decide the project licence and ownership notices.
-- [ ] Confirm the technology stack.
-- [ ] Define the first-release scope.
+- [x] Decide the project licence and ownership notices.
+- [x] Confirm the technology stack.
+- [x] Define the first-release scope.
 
 ## Phase 1 — Application foundation
 
-- [ ] Create the application scaffold.
-- [ ] Configure TypeScript and code formatting.
-- [ ] Add linting and automated checks.
-- [ ] Establish the dark visual theme and design tokens.
-- [ ] Build responsive navigation and page layouts.
-- [ ] Add Finnish/English language infrastructure.
+- [x] Create the application scaffold.
+- [x] Configure TypeScript and code formatting.
+- [x] Add linting and automated checks.
+- [x] Establish the dark visual theme and design tokens.
+- [x] Build responsive navigation and page layouts.
+- [x] Add Finnish/English language infrastructure.
+- [x] Render a read-only catalogue demo from `data/catalog-seed.json`.
 - [ ] Add accessible form, dialog and notification components.
+- [ ] Add end-to-end tests for core browsing journeys.
 
 ## Phase 2 — Catalogue
 
 - [ ] Define the final media-type taxonomy.
 - [ ] Implement catalogue database tables and migrations.
 - [ ] Add catalogue item create, read, update and delete flows.
-- [ ] Implement search, sorting and filters.
+- [ ] Implement persistent catalogue search, sorting and filters.
 - [ ] Add metadata provider integration behind server-side routes.
 - [ ] Add metadata attribution and provider-specific compliance.
 - [ ] Add duplicate detection and external identifiers.
+
+The current browser search, sorting and category filters operate only on the static starter JSON. They are not a persistent catalogue API.
 
 ## Phase 3 — Accounts and personal library
 
@@ -55,7 +59,7 @@ This roadmap is a living plan. Items are not complete unless they are implemente
 
 ## Phase 5 — Quality and release
 
-- [ ] Add unit and integration tests.
+- [ ] Add unit and integration tests for backend behaviour.
 - [ ] Add end-to-end tests for critical user journeys.
 - [ ] Run accessibility checks and manual keyboard testing.
 - [ ] Test responsive layouts on mobile, tablet and desktop.

@@ -4,13 +4,17 @@ Recommended stack: Supabase PostgreSQL and Auth for persistence and accounts, wi
 
 ## Current foundation
 
-- supabase/config.toml — local Supabase CLI configuration.
-- supabase/migrations/20261106000000_initial_schema.sql — catalogue, profiles, ratings, reviews, comments, personal library and lists, with initial row-level security (RLS).
-- supabase/migrations/20261106001000_moderation_policy_guard.sql — members may only edit their own pending community submissions.
-- supabase/migrations/20261106002000_auth_profiles_and_comment_visibility.sql — automatic profile creation on Auth sign-up and stricter comment visibility/target validation.
-- supabase/tests/SECURITY_TEST_CHECKLIST.md — manual policy and security test checklist.
+- `app/` — first runnable Next.js App Router frontend scaffold, responsive dark archive theme and Finnish/English interface.
+- `lib/catalogue.ts` — `CatalogueSource` read boundary with a read-only JSON seed adapter.
+- `lib/config.ts` — public, per-instance branding and initial-language settings.
+- `data/catalog-seed.json` — 93 public starter entries rendered by the current UI.
+- `supabase/config.toml` — local Supabase CLI configuration.
+- `supabase/migrations/20261106000000_initial_schema.sql` — catalogue, profiles, ratings, reviews, comments, personal library and lists, with initial row-level security (RLS).
+- `supabase/migrations/20261106001000_moderation_policy_guard.sql` — members may only edit their own pending community submissions.
+- `supabase/migrations/20261106002000_auth_profiles_and_comment_visibility.sql` — automatic profile creation on Auth sign-up and stricter comment visibility/target validation.
+- `supabase/tests/SECURITY_TEST_CHECKLIST.md` — manual policy and security test checklist.
 
-The migrations are source-controlled but are not evidence of a live Supabase deployment. Apply and test them against a disposable local database before creating or connecting a hosted project.
+The frontend does **not** connect to Supabase or any external metadata provider. The seed adapter is read-only and does not persist catalogue edits or personal data. The SQL migrations are source-controlled but are not evidence of a live Supabase deployment. Apply and test them against a disposable local database before creating or connecting a hosted project.
 
 ## Work packages
 
@@ -26,11 +30,12 @@ The migrations are source-controlled but are not evidence of a live Supabase dep
 
 ## Immediate next steps
 
-1. Install Docker and the Supabase CLI, then run supabase start from the repository root.
-2. Apply migrations to a fresh local database with supabase db reset.
-3. Run the checks in supabase/tests/SECURITY_TEST_CHECKLIST.md; convert the manual cases into pgTAP tests as the schema stabilises.
-4. Add a deterministic importer for data/catalog-seed.json, with explicit media-type and country-code mapping, duplicate detection and an unpublished-by-default seed policy.
-5. Build the authentication UI only after profile creation and RLS have been tested.
-6. Add read-only catalogue queries before enabling user-generated content.
+1. Install Docker and the Supabase CLI, then run `supabase start` from the repository root.
+2. Apply migrations to a fresh local database with `supabase db reset`.
+3. Run the checks in `supabase/tests/SECURITY_TEST_CHECKLIST.md`; convert the manual cases into pgTAP tests as the schema stabilises.
+4. Add a deterministic importer for `data/catalog-seed.json`, with explicit media-type and country-code mapping, duplicate detection and an unpublished-by-default seed policy.
+5. Implement a server-only database-backed `CatalogueSource` adapter using only the self-hosted instance's credentials. Keep privileged keys out of browser bundles.
+6. Add authentication only after profile creation and RLS have been tested.
+7. Add read-only catalogue queries before enabling user-generated content.
 
 No hosted project, credentials or production deployment have been created. Never put privileged database keys in browser code or commit real credentials.
