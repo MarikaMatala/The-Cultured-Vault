@@ -17,6 +17,22 @@ const supportedMediaTypes = new Set([
   "book",
   "comic",
 ]);
+const privateFieldPattern =
+  /(rating|review|user.?id|account.?id|profile.?id|personal|private|email|token|secret|password)/i;
+
+function assertPublicMetadata(value, path = "catalogue") {
+  if (Array.isArray(value)) {
+    value.forEach((item, index) => assertPublicMetadata(item, `${path}[${index}]`));
+    return;
+  }
+
+  if (value && typeof value === "object") {
+    for (const [key, child] of Object.entries(value)) {
+      assert.doesNotMatch(key, privateFieldPattern, `${path} contains a private-data field: ${key}`);
+      assertPublicMetadata(child, `${path}.${key}`);
+    }
+  }
+}
 
 test("starter catalogue is a non-empty array", () => {
   assert.ok(Array.isArray(seed));
@@ -40,6 +56,21 @@ test("every entry uses a media type supported by the initial interface", () => {
   for (const entry of seed) {
     assert.ok(supportedMediaTypes.has(entry.mediaType), entry.mediaType);
   }
+});
+
+test("optional genres and tags are arrays of strings", () => {
+  for (const entry of seed) {
+    for (const field of ["genres", "tags"]) {
+      if (entry[field] !== undefined) {
+        assert.ok(Array.isArray(entry[field]), `${entry.id}: ${field} must be an array`);
+        assert.ok(entry[field].every((value) => typeof value === "string"));
+      }
+    }
+  }
+});
+
+test("starter catalogue contains public metadata only", () => {
+  assertPublicMetadata(seed);
 });
 
 test("release years are optional integers in the supported range", () => {
