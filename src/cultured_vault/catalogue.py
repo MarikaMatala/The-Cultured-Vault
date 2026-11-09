@@ -7,7 +7,9 @@ and ISO country codes, without modifying the source catalogue.
 
 # CODE MAP / COMMENTING GUIDE
 # File purpose: Python library for loading, validating, and processing catalogue records.
-# Structure: imports and data structures first, followed by helper functions and main operations.
+# CODE MAP: allowed media types and country codes -> validation error and catalogue entry models -> field validators -> record parser -> catalogue loader.
+# EDITING TIP: when adding a supported catalogue field, update the data model, validation logic, and related tests together.
+# Keep source JSON values human-readable; this module normalizes them without modifying the source file.
 
 from __future__ import annotations
 
