@@ -1,6 +1,6 @@
-// KOMMENTOINTIOHJE / CODE MAP
-// Tiedoston tarkoitus: Next.js-sovelluksen juurilayout: HTML-runko, metatiedot, fontit ja globaalit tyylit.
-// Rakenne: tuonnit ja asetukset ensin, tietotyypit ja apufunktiot seuraavaksi, komponentti tai päätoiminnot lopuksi.
+// CODE MAP / COMMENTING GUIDE
+// File purpose: Next.js-sovelluksen juurilayout: HTML-runko, metatiedot, fontit ja globaalit tyylit.
+// Structure: imports and settings first, followed by data types and helper functions, with the component or main operations last.
 
 import type { Metadata } from "next";
 import type { CSSProperties, ReactNode } from "react";
