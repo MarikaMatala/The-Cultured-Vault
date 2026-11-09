@@ -1,5 +1,5 @@
 -- CODE MAP / COMMENTING GUIDE
--- File purpose: Tietokannan moderointikäytäntöjen lisäsuojaus ja RLS-politiikkojen turvarajaukset.
+-- File purpose: Additional safeguards for database moderation rules and Row Level Security policies.
 -- Read the migration from top to bottom. Each CREATE / ALTER / POLICY block changes the database schema or access permissions.
 
 -- Tighten moderation ownership: ordinary members may only edit pending submissions.
