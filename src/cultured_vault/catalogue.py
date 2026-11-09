@@ -1,3 +1,7 @@
+# KOMMENTOINTIOHJE / CODE MAP
+# Tiedoston tarkoitus: Python-kirjasto katalogin lataamiseen, muokkaamiseen ja tietueiden käsittelyyn.
+# Rakenne: tuonnit ja tietorakenteet ensin, apufunktiot seuraavaksi, päätoiminnot lopuksi.
+
 """Validate and normalize the public starter catalogue.
 
 The JSON file is an editorial source format. This module converts its
@@ -71,6 +75,7 @@ class CatalogueEntry:
         }
 
 
+# FUNKTIO-OSIO ALKAA: _required_text.
 def _required_text(record: dict[str, Any], key: str, label: str, maximum: int) -> str:
     value = record.get(key)
     if not isinstance(value, str) or not value.strip():
@@ -81,6 +86,7 @@ def _required_text(record: dict[str, Any], key: str, label: str, maximum: int) -
     return value
 
 
+# FUNKTIO-OSIO ALKAA: _optional_text.
 def _optional_text(record: dict[str, Any], key: str, label: str) -> str | None:
     value = record.get(key)
     if value is None or value == "":
@@ -90,6 +96,7 @@ def _optional_text(record: dict[str, Any], key: str, label: str) -> str | None:
     return value.strip() or None
 
 
+# FUNKTIO-OSIO ALKAA: _string_list.
 def _string_list(record: dict[str, Any], key: str, label: str) -> tuple[str, ...]:
     value = record.get(key, [])
     if value is None:
@@ -104,6 +111,7 @@ def _string_list(record: dict[str, Any], key: str, label: str) -> tuple[str, ...
     return tuple(dict.fromkeys(cleaned))
 
 
+# FUNKTIO-OSIO ALKAA: _country_codes.
 def _country_codes(value: Any, label: str) -> tuple[str, ...]:
     if value is None or value == "":
         return ()
@@ -124,6 +132,7 @@ def _country_codes(value: Any, label: str) -> tuple[str, ...]:
     return tuple(dict.fromkeys(codes))
 
 
+# FUNKTIO-OSIO ALKAA: parse_entry.
 def parse_entry(record: Any, index: int = 0) -> CatalogueEntry:
     """Validate one raw JSON record and normalize database-facing values."""
     label = f"Entry {index + 1}"
@@ -166,6 +175,7 @@ def parse_entry(record: Any, index: int = 0) -> CatalogueEntry:
     )
 
 
+# FUNKTIO-OSIO ALKAA: load_catalogue.
 def load_catalogue(path: Path) -> list[CatalogueEntry]:
     """Load the JSON catalogue, validating every record and unique ID."""
     try:
