@@ -51,6 +51,7 @@ function matchesCategory(entry: CatalogueEntry, category: CategoryKey): boolean 
 }
 
 // FUNKTIO-OSIO ALKAA: coverVariant.
+// TOIMINTO-OSIO PÄÄTTYY: matchesCategory. Seuraava osio alkaa seuraavasta toiminnosta tai tiedoston lopusta.
 function coverVariant(mediaType: string): string {
   if (mediaType === "film") return "cover-film";
   if (mediaType === "tv-series") return "cover-series";
@@ -63,17 +64,20 @@ function coverVariant(mediaType: string): string {
 }
 
 // FUNKTIO-OSIO ALKAA: mediaTypeLabel.
+// TOIMINTO-OSIO PÄÄTTYY: coverVariant. Seuraava osio alkaa seuraavasta toiminnosta tai tiedoston lopusta.
 function mediaTypeLabel(mediaType: string, locale: Locale): string {
   const dictionary = messages[locale].mediaTypes as Record<string, string>;
   return dictionary[mediaType] ?? mediaType.replaceAll("-", " ");
 }
 
 // FUNKTIO-OSIO ALKAA: creatorName.
+// TOIMINTO-OSIO PÄÄTTYY: mediaTypeLabel. Seuraava osio alkaa seuraavasta toiminnosta tai tiedoston lopusta.
 function creatorName(entry: CatalogueEntry): string | undefined {
   return entry.creator || entry.artist || entry.author;
 }
 
 // FUNKTIO-OSIO ALKAA: VaultApp.
+// TOIMINTO-OSIO PÄÄTTYY: creatorName. Seuraava osio alkaa seuraavasta toiminnosta tai tiedoston lopusta.
 export function VaultApp({ config, entries }: VaultAppProps) {
   const [locale, setLocale] = useState<Locale>(config.defaultLocale);
   const [activeCategory, setActiveCategory] = useState<CategoryKey>("all");
@@ -408,3 +412,5 @@ export function VaultApp({ config, entries }: VaultAppProps) {
     </main>
   );
 }
+
+// TOIMINTO-OSIO PÄÄTTYY: VaultApp. Seuraava osio alkaa seuraavasta toiminnosta tai tiedoston lopusta.
