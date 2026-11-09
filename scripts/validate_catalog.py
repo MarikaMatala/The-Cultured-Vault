@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Validate the starter catalogue without changing its source JSON."""
 
-# KOMMENTOINTIOHJE / CODE MAP
-# Tiedoston tarkoitus: Katalogiaineiston rakenteen, pakollisten kenttien ja tietojen eheyden validointi.
-# Rakenne: tarkistuksen asetukset ensin, validointifunktiot seuraavaksi ja suoritus lopuksi.
+# CODE MAP / COMMENTING GUIDE
+# File purpose: Katalogiaineiston rakenteen, pakollisten kenttien ja tietojen eheyden validointi.
+# Structure: tarkistuksen asetukset ensin, validointifunktiot seuraavaksi ja suoritus lopuksi.
 
 from pathlib import Path
 import sys
@@ -14,7 +14,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from cultured_vault.catalogue import CatalogueValidationError, load_catalogue
 
 
-# FUNKTIO-OSIO ALKAA: main.
+# FUNCTION SECTION START: main.
 def main() -> int:
     path = ROOT / "data" / "catalog-seed.json"
     try:
@@ -35,4 +35,4 @@ def main() -> int:
 if __name__ == "__main__":
     raise SystemExit(main())
 
-# FUNKTIO-OSIO PÄÄTTYY: main. Seuraava osio alkaa seuraavasta määrittelystä tai tiedoston lopusta.
+# FUNCTION SECTION END: main. The next section starts at the next definition or at the end of the file.
