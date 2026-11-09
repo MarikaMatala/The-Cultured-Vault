@@ -1,5 +1,5 @@
 // CODE MAP / COMMENTING GUIDE
-// File purpose: JavaScript-testit katalogin käsittelylle, tietueiden validoinnille ja apufunktioille.
+// File purpose: JavaScript tests for catalogue processing, record validation, and helper functions.
 // Structure: testidata ja valmistelut ensin, testitapaukset seuraavaksi. Jokainen testi tarkistaa yhden rajatun asian.
 
 import assert from "node:assert/strict";
@@ -92,4 +92,4 @@ test("release years are optional integers in the supported range", () => {
   }
 });
 
-// TOIMINTO-OSIO PÄÄTTYY: assertPublicMetadata. The next section starts at the next function or at the end of the file.
+// FUNCTION SECTION END: assertPublicMetadata. The next section starts at the next function or at the end of the file.
