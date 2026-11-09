@@ -1,6 +1,6 @@
-# KOMMENTOINTIOHJE / CODE MAP
-# Tiedoston tarkoitus: Python-testit katalogin tietojen lukemiselle, validoinnille ja käsittelylle.
-# Rakenne: testidata ja valmistelut ensin, testitapaukset seuraavaksi. Jokainen testi tarkistaa yhden rajatun asian.
+# CODE MAP / COMMENTING GUIDE
+# File purpose: Python-testit katalogin tietojen lukemiselle, validoinnille ja käsittelylle.
+# Structure: testidata ja valmistelut ensin, testitapaukset seuraavaksi. Jokainen testi tarkistaa yhden rajatun asian.
 
 import json
 from pathlib import Path
@@ -15,7 +15,7 @@ from cultured_vault.catalogue import (
 
 
 class CatalogueValidationTests(unittest.TestCase):
-    # TESTIOSIO ALKAA: test_normalizes_media_types_and_multiple_countries.
+    # TEST SECTION START: test_normalizes_media_types_and_multiple_countries.
     def test_normalizes_media_types_and_multiple_countries(self):
         entry = parse_entry({
             "id": "film-example-2020",
@@ -33,8 +33,8 @@ class CatalogueValidationTests(unittest.TestCase):
         self.assertEqual(entry.genres, ("Fantasy",))
         self.assertEqual(entry.as_record()["countryCodes"], ["JP", "US"])
 
-    # TESTIOSIO PÄÄTTYY: test_normalizes_media_types_and_multiple_countries. Seuraava testi alkaa seuraavasta testifunktiosta.
-    # TESTIOSIO ALKAA: test_maps_creator_fields_without_losing_source_values.
+    # TEST SECTION END: test_normalizes_media_types_and_multiple_countries. The next test starts at the next test function.
+    # TEST SECTION START: test_maps_creator_fields_without_losing_source_values.
     def test_maps_creator_fields_without_losing_source_values(self):
         artist = parse_entry({
             "id": "album-example",
@@ -52,14 +52,14 @@ class CatalogueValidationTests(unittest.TestCase):
         self.assertEqual(artist.creator, "Example Artist")
         self.assertEqual(author.creator, "Example Author")
 
-    # TESTIOSIO PÄÄTTYY: test_maps_creator_fields_without_losing_source_values. Seuraava testi alkaa seuraavasta testifunktiosta.
-    # TESTIOSIO ALKAA: test_rejects_unknown_media_type.
+    # TEST SECTION END: test_maps_creator_fields_without_losing_source_values. The next test starts at the next test function.
+    # TEST SECTION START: test_rejects_unknown_media_type.
     def test_rejects_unknown_media_type(self):
         with self.assertRaisesRegex(CatalogueValidationError, "unsupported media type"):
             parse_entry({"id": "example", "title": "Example", "mediaType": "unknown"})
 
-    # TESTIOSIO PÄÄTTYY: test_rejects_unknown_media_type. Seuraava testi alkaa seuraavasta testifunktiosta.
-    # TESTIOSIO ALKAA: test_rejects_unknown_country_instead_of_guessing.
+    # TEST SECTION END: test_rejects_unknown_media_type. The next test starts at the next test function.
+    # TEST SECTION START: test_rejects_unknown_country_instead_of_guessing.
     def test_rejects_unknown_country_instead_of_guessing(self):
         with self.assertRaisesRegex(CatalogueValidationError, "no configured ISO"):
             parse_entry({
@@ -69,8 +69,8 @@ class CatalogueValidationTests(unittest.TestCase):
                 "country": "Atlantis",
             })
 
-    # TESTIOSIO PÄÄTTYY: test_rejects_unknown_country_instead_of_guessing. Seuraava testi alkaa seuraavasta testifunktiosta.
-    # TESTIOSIO ALKAA: test_rejects_invalid_release_year_and_language.
+    # TEST SECTION END: test_rejects_unknown_country_instead_of_guessing. The next test starts at the next test function.
+    # TEST SECTION START: test_rejects_invalid_release_year_and_language.
     def test_rejects_invalid_release_year_and_language(self):
         base = {"id": "example", "title": "Example", "mediaType": "film"}
         with self.assertRaisesRegex(CatalogueValidationError, "releaseYear"):
@@ -78,8 +78,8 @@ class CatalogueValidationTests(unittest.TestCase):
         with self.assertRaisesRegex(CatalogueValidationError, "language"):
             parse_entry({**base, "language": "English"})
 
-    # TESTIOSIO PÄÄTTYY: test_rejects_invalid_release_year_and_language. Seuraava testi alkaa seuraavasta testifunktiosta.
-    # TESTIOSIO ALKAA: test_rejects_duplicate_ids_in_catalogue_file.
+    # TEST SECTION END: test_rejects_invalid_release_year_and_language. The next test starts at the next test function.
+    # TEST SECTION START: test_rejects_duplicate_ids_in_catalogue_file.
     def test_rejects_duplicate_ids_in_catalogue_file(self):
         payload = [
             {"id": "same-id", "title": "One", "mediaType": "film"},
@@ -91,8 +91,8 @@ class CatalogueValidationTests(unittest.TestCase):
             with self.assertRaisesRegex(CatalogueValidationError, "duplicate id"):
                 load_catalogue(path)
 
-    # TESTIOSIO PÄÄTTYY: test_rejects_duplicate_ids_in_catalogue_file. Seuraava testi alkaa seuraavasta testifunktiosta.
-    # TESTIOSIO ALKAA: test_rejects_non_list_genres_and_tags.
+    # TEST SECTION END: test_rejects_duplicate_ids_in_catalogue_file. The next test starts at the next test function.
+    # TEST SECTION START: test_rejects_non_list_genres_and_tags.
     def test_rejects_non_list_genres_and_tags(self):
         with self.assertRaisesRegex(CatalogueValidationError, "genres"):
             parse_entry({
@@ -106,4 +106,4 @@ class CatalogueValidationTests(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 
-    # TESTIOSIO PÄÄTTYY: test_rejects_non_list_genres_and_tags. Seuraava testi alkaa seuraavasta testifunktiosta.
+    # TEST SECTION END: test_rejects_non_list_genres_and_tags. The next test starts at the next test function.
