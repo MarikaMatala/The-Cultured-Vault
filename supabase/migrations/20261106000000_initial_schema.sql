@@ -1,5 +1,5 @@
 -- CODE MAP / COMMENTING GUIDE
--- File purpose: Supabase-tietokannan alkuperäinen skeema: taulut, relaatiot, indeksit ja käyttöoikeudet.
+-- File purpose: Initial Supabase database schema: tables, relationships, indexes, and access policies.
 -- Read the migration from top to bottom. Each CREATE / ALTER / POLICY block changes the database schema or access permissions.
 
 -- Initial database foundation for The Cultured Vault.
