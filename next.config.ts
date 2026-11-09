@@ -1,6 +1,6 @@
-// KOMMENTOINTIOHJE / CODE MAP
-// Tiedoston tarkoitus: Next.js-sovelluksen rakennus- ja palvelinasetukset.
-// Rakenne: tuonnit ja asetukset ensin; tämän jälkeen määritellään työkalun toiminta.
+// CODE MAP / COMMENTING GUIDE
+// File purpose: Next.js-sovelluksen rakennus- ja palvelinasetukset.
+// Structure: imports and settings first; the tool's behavior is defined below.
 
 import type { NextConfig } from "next";
 
