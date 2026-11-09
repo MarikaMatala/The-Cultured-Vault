@@ -1,6 +1,7 @@
 // CODE MAP / COMMENTING GUIDE
 // File purpose: Application environment and runtime configuration.
-// Structure: imports and settings first, followed by data types and helper functions, with the component or main operations last.
+// CODE MAP: supported locale and application configuration types -> default locale and configuration values.
+// EDITING TIP: when adding a supported locale or configuration option, update its type and every place that consumes it.
 
 export type Locale = "en" | "fi";
 
