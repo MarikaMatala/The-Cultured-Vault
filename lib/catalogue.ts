@@ -1,6 +1,6 @@
-// KOMMENTOINTIOHJE / CODE MAP
-// Tiedoston tarkoitus: Katalogin tietorakenteet, aineiston muokkaus ja katalogiin liittyvät apufunktiot.
-// Rakenne: tuonnit ja asetukset ensin, tietotyypit ja apufunktiot seuraavaksi, komponentti tai päätoiminnot lopuksi.
+// CODE MAP / COMMENTING GUIDE
+// File purpose: Catalogue data structures, data processing, and catalogue helper functions.
+// Structure: imports and settings first, followed by data types and helper functions, with the component or main operations last.
 
 import rawCatalogue from "../data/catalog-seed.json";
 
@@ -39,9 +39,9 @@ class SeedCatalogueSource implements CatalogueSource {
 
 const catalogueSource: CatalogueSource = new SeedCatalogueSource();
 
-// FUNKTIO-OSIO ALKAA: getCatalogueEntries.
+// FUNCTION SECTION START: getCatalogueEntries.
 export function getCatalogueEntries(): Promise<CatalogueEntry[]> {
   return catalogueSource.list();
 }
 
-// TOIMINTO-OSIO PÄÄTTYY: getCatalogueEntries. Seuraava osio alkaa seuraavasta toiminnosta tai tiedoston lopusta.
+// FUNCTION SECTION END: getCatalogueEntries. The next section starts at the next function or at the end of the file.
