@@ -1,7 +1,7 @@
 /*
- * KOMMENTOINTIOHJE / CODE MAP
- * Tiedoston tarkoitus: Sovelluksen globaalit tyylit, värit, typografia, asettelut ja responsiivinen käyttöliittymä.
- * Rakenne: teeman muuttujat ja yleiset säännöt ensin, komponentit seuraavaksi, responsiiviset säännöt lopuksi.
+ * CODE MAP / COMMENTING GUIDE
+ * File purpose: Global application styles, colors, typography, layouts, and responsive interface.
+ * Structure: theme variables and global rules first, followed by components and responsive rules.
  */
 @import "tailwindcss";
 
@@ -988,7 +988,7 @@ select:focus-visible {
   color: var(--gold);
 }
 
-/* RESPONSIIIVINEN OSIO: alla oleva sääntö mukauttaa näkymää näyttökoon tai asetusten mukaan. */
+/* RESPONSIVE SECTION: the rule below adapts the layout to the viewport size or user preferences. */
 @media (max-width: 1050px) {
   .header-inner {
     gap: 18px;
@@ -1011,7 +1011,7 @@ select:focus-visible {
   }
 }
 
-/* RESPONSIIIVINEN OSIO: alla oleva sääntö mukauttaa näkymää näyttökoon tai asetusten mukaan. */
+/* RESPONSIVE SECTION: the rule below adapts the layout to the viewport size or user preferences. */
 @media (max-width: 760px) {
   .shell {
     width: min(100% - 34px, 620px);
@@ -1097,7 +1097,7 @@ select:focus-visible {
   }
 }
 
-/* RESPONSIIIVINEN OSIO: alla oleva sääntö mukauttaa näkymää näyttökoon tai asetusten mukaan. */
+/* RESPONSIVE SECTION: the rule below adapts the layout to the viewport size or user preferences. */
 @media (max-width: 540px) {
   .catalogue-tools {
     grid-template-columns: 1fr;
@@ -1153,7 +1153,7 @@ select:focus-visible {
   }
 }
 
-/* RESPONSIIIVINEN OSIO: alla oleva sääntö mukauttaa näkymää näyttökoon tai asetusten mukaan. */
+/* RESPONSIVE SECTION: the rule below adapts the layout to the viewport size or user preferences. */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -1165,4 +1165,4 @@ select:focus-visible {
   }
 }
 
-/* TIEDOSTON TYYLIOSIO PÄÄTTYY TÄHÄN. */
+/* END OF STYLESHEET. */
