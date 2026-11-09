@@ -1,6 +1,8 @@
 // CODE MAP / COMMENTING GUIDE
 // File purpose: Main Cultured Vault application interface: catalogue, search, filters, reviews, and user actions.
-// Structure: imports and settings first, followed by data types and helper functions, with the component or main operations last.
+// Structure: imports -> component props and types -> category configuration -> helper functions -> catalogue filtering/sorting -> page layout.
+// Editing tip: change category labels in lib/i18n.ts and category/media-type mapping in this file; catalogue records live in data/catalog-seed.json.
+// Navigation: use SECTION and FUNCTION markers to jump between logic and interface areas in Visual Studio Code.
 
 "use client";
 
@@ -41,6 +43,7 @@ const categoryMediaTypes: Partial<Record<CategoryKey, string[]>> = {
   comics: ["comic"],
 };
 
+// SECTION 1 START: category configuration and helper functions.
 // Checks whether a catalogue entry belongs to the selected category.
 function matchesCategory(entry: CatalogueEntry, category: CategoryKey): boolean {
   if (category === "all") {
@@ -50,7 +53,7 @@ function matchesCategory(entry: CatalogueEntry, category: CategoryKey): boolean 
   return categoryMediaTypes[category]?.includes(entry.mediaType) ?? false;
 }
 
-// Valitsee teostyypin perusteella sopivan kansikuvan visuaalisen tyylin.
+// Selects the visual cover style based on the work's media type.
 // FUNCTION SECTION END: matchesCategory. The next section starts at the next function or at the end of the file.
 function coverVariant(mediaType: string): string {
   if (mediaType === "film") return "cover-film";
@@ -76,6 +79,7 @@ function creatorName(entry: CatalogueEntry): string | undefined {
   return entry.creator || entry.artist || entry.author;
 }
 
+// SECTION 2 START: main interface component and its interactive state.
 // Main application component: manages the catalogue view, search, filters, sorting, and user actions.
 // FUNCTION SECTION END: creatorName. The next section starts at the next function or at the end of the file.
 export function VaultApp({ config, entries }: VaultAppProps) {
@@ -89,6 +93,7 @@ export function VaultApp({ config, entries }: VaultAppProps) {
     document.documentElement.lang = locale;
   }, [locale]);
 
+  // SECTION 3 START: search, category filtering, and sorting.
   const visibleEntries = useMemo(() => {
     const normalizedQuery = query.trim().toLocaleLowerCase(locale === "fi" ? "fi-FI" : "en-US");
 
