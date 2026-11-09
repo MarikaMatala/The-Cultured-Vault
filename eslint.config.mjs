@@ -1,6 +1,6 @@
-// KOMMENTOINTIOHJE / CODE MAP
-// Tiedoston tarkoitus: ESLintin koodintarkistuksen asetukset ja projektissa käytettävät säännöt.
-// Rakenne: tuonnit ja asetukset ensin; tämän jälkeen määritellään työkalun toiminta.
+// CODE MAP / COMMENTING GUIDE
+// File purpose: ESLint code-checking configuration and the rules used by this project.
+// Structure: imports and settings first; the tool's behavior is defined below.
 
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
