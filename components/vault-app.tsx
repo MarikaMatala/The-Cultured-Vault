@@ -1,3 +1,7 @@
+// KOMMENTOINTIOHJE / CODE MAP
+// Tiedoston tarkoitus: Cultured Vault -sovelluksen pääkäyttöliittymä: katalogi, haku, suodatus, arviot ja käyttäjän toiminnot.
+// Rakenne: tuonnit ja asetukset ensin, tietotyypit ja apufunktiot seuraavaksi, komponentti tai päätoiminnot lopuksi.
+
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
@@ -37,6 +41,7 @@ const categoryMediaTypes: Partial<Record<CategoryKey, string[]>> = {
   comics: ["comic"],
 };
 
+// FUNKTIO-OSIO ALKAA: matchesCategory.
 function matchesCategory(entry: CatalogueEntry, category: CategoryKey): boolean {
   if (category === "all") {
     return true;
@@ -45,6 +50,7 @@ function matchesCategory(entry: CatalogueEntry, category: CategoryKey): boolean 
   return categoryMediaTypes[category]?.includes(entry.mediaType) ?? false;
 }
 
+// FUNKTIO-OSIO ALKAA: coverVariant.
 function coverVariant(mediaType: string): string {
   if (mediaType === "film") return "cover-film";
   if (mediaType === "tv-series") return "cover-series";
@@ -56,15 +62,18 @@ function coverVariant(mediaType: string): string {
   return "cover-film";
 }
 
+// FUNKTIO-OSIO ALKAA: mediaTypeLabel.
 function mediaTypeLabel(mediaType: string, locale: Locale): string {
   const dictionary = messages[locale].mediaTypes as Record<string, string>;
   return dictionary[mediaType] ?? mediaType.replaceAll("-", " ");
 }
 
+// FUNKTIO-OSIO ALKAA: creatorName.
 function creatorName(entry: CatalogueEntry): string | undefined {
   return entry.creator || entry.artist || entry.author;
 }
 
+// FUNKTIO-OSIO ALKAA: VaultApp.
 export function VaultApp({ config, entries }: VaultAppProps) {
   const [locale, setLocale] = useState<Locale>(config.defaultLocale);
   const [activeCategory, setActiveCategory] = useState<CategoryKey>("all");
