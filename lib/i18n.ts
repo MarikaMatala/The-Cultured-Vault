@@ -1,6 +1,6 @@
-// KOMMENTOINTIOHJE / CODE MAP
-// Tiedoston tarkoitus: Sovelluksen kielitekstit ja käännösten käsittely.
-// Rakenne: tuonnit ja asetukset ensin, tietotyypit ja apufunktiot seuraavaksi, komponentti tai päätoiminnot lopuksi.
+// CODE MAP / COMMENTING GUIDE
+// File purpose: Application interface strings and translation handling.
+// Structure: imports and settings first, followed by data types and helper functions, with the component or main operations last.
 
 import type { Locale } from "./config";
 
