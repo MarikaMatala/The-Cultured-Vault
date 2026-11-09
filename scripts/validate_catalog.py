@@ -34,3 +34,5 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+# FUNKTIO-OSIO PÄÄTTYY: main. Seuraava osio alkaa seuraavasta määrittelystä tai tiedoston lopusta.
