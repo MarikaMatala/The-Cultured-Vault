@@ -1,9 +1,9 @@
+#!/usr/bin/env python3
+"""Validate the starter catalogue without changing its source JSON."""
+
 # KOMMENTOINTIOHJE / CODE MAP
 # Tiedoston tarkoitus: Katalogiaineiston rakenteen, pakollisten kenttien ja tietojen eheyden validointi.
 # Rakenne: tarkistuksen asetukset ensin, validointifunktiot seuraavaksi ja suoritus lopuksi.
-
-#!/usr/bin/env python3
-"""Validate the starter catalogue without changing its source JSON."""
 
 from pathlib import Path
 import sys
