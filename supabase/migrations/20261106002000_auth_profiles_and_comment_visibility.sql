@@ -1,5 +1,5 @@
 -- CODE MAP / COMMENTING GUIDE
--- File purpose: Kirjautumisen käyttäjäprofiilit ja kommenttien näkyvyyteen liittyvät tietokantamuutokset.
+-- File purpose: Database changes for authenticated user profiles and comment visibility.
 -- Read the migration from top to bottom. Each CREATE / ALTER / POLICY block changes the database schema or access permissions.
 
 -- Authentication profile bootstrap and comment visibility hardening.
