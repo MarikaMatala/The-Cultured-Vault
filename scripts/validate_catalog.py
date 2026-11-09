@@ -1,3 +1,7 @@
+# KOMMENTOINTIOHJE / CODE MAP
+# Tiedoston tarkoitus: Katalogiaineiston rakenteen, pakollisten kenttien ja tietojen eheyden validointi.
+# Rakenne: tarkistuksen asetukset ensin, validointifunktiot seuraavaksi ja suoritus lopuksi.
+
 #!/usr/bin/env python3
 """Validate the starter catalogue without changing its source JSON."""
 
@@ -10,6 +14,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from cultured_vault.catalogue import CatalogueValidationError, load_catalogue
 
 
+# FUNKTIO-OSIO ALKAA: main.
 def main() -> int:
     path = ROOT / "data" / "catalog-seed.json"
     try:
