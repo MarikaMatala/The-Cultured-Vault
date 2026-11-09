@@ -1,6 +1,6 @@
-// KOMMENTOINTIOHJE / CODE MAP
-// Tiedoston tarkoitus: Cultured Vault -sovelluksen pääkäyttöliittymä: katalogi, haku, suodatus, arviot ja käyttäjän toiminnot.
-// Rakenne: tuonnit ja asetukset ensin, tietotyypit ja apufunktiot seuraavaksi, komponentti tai päätoiminnot lopuksi.
+// CODE MAP / COMMENTING GUIDE
+// File purpose: Main Cultured Vault application interface: catalogue, search, filters, reviews, and user actions.
+// Structure: imports and settings first, followed by data types and helper functions, with the component or main operations last.
 
 "use client";
 
@@ -41,7 +41,7 @@ const categoryMediaTypes: Partial<Record<CategoryKey, string[]>> = {
   comics: ["comic"],
 };
 
-// Tarkistaa, kuuluuko katalogin teos valittuun sisältöluokkaan.
+// Checks whether a catalogue entry belongs to the selected category.
 function matchesCategory(entry: CatalogueEntry, category: CategoryKey): boolean {
   if (category === "all") {
     return true;
@@ -51,7 +51,7 @@ function matchesCategory(entry: CatalogueEntry, category: CategoryKey): boolean 
 }
 
 // Valitsee teostyypin perusteella sopivan kansikuvan visuaalisen tyylin.
-// TOIMINTO-OSIO PÄÄTTYY: matchesCategory. Seuraava osio alkaa seuraavasta toiminnosta tai tiedoston lopusta.
+// FUNCTION SECTION END: matchesCategory. The next section starts at the next function or at the end of the file.
 function coverVariant(mediaType: string): string {
   if (mediaType === "film") return "cover-film";
   if (mediaType === "tv-series") return "cover-series";
@@ -63,21 +63,21 @@ function coverVariant(mediaType: string): string {
   return "cover-film";
 }
 
-// Palauttaa teostyypin käyttöliittymässä näytettävän käännöksen.
-// TOIMINTO-OSIO PÄÄTTYY: coverVariant. Seuraava osio alkaa seuraavasta toiminnosta tai tiedoston lopusta.
+// Returns the translated label for a work's media type.
+// FUNCTION SECTION END: coverVariant. The next section starts at the next function or at the end of the file.
 function mediaTypeLabel(mediaType: string, locale: Locale): string {
   const dictionary = messages[locale].mediaTypes as Record<string, string>;
   return dictionary[mediaType] ?? mediaType.replaceAll("-", " ");
 }
 
-// Palauttaa teoksen tekijän nimen yhtenäisessä muodossa.
-// TOIMINTO-OSIO PÄÄTTYY: mediaTypeLabel. Seuraava osio alkaa seuraavasta toiminnosta tai tiedoston lopusta.
+// Returns the work creator's name in a consistent format.
+// FUNCTION SECTION END: mediaTypeLabel. The next section starts at the next function or at the end of the file.
 function creatorName(entry: CatalogueEntry): string | undefined {
   return entry.creator || entry.artist || entry.author;
 }
 
-// Sovelluksen pääkomponentti: hallitsee katalogin näkymää, hakuja, suodattimia, järjestystä ja käyttäjän toimintoja.
-// TOIMINTO-OSIO PÄÄTTYY: creatorName. Seuraava osio alkaa seuraavasta toiminnosta tai tiedoston lopusta.
+// Main application component: manages the catalogue view, search, filters, sorting, and user actions.
+// FUNCTION SECTION END: creatorName. The next section starts at the next function or at the end of the file.
 export function VaultApp({ config, entries }: VaultAppProps) {
   const [locale, setLocale] = useState<Locale>(config.defaultLocale);
   const [activeCategory, setActiveCategory] = useState<CategoryKey>("all");
@@ -413,4 +413,4 @@ export function VaultApp({ config, entries }: VaultAppProps) {
   );
 }
 
-// TOIMINTO-OSIO PÄÄTTYY: VaultApp. Seuraava osio alkaa seuraavasta toiminnosta tai tiedoston lopusta.
+// FUNCTION SECTION END: VaultApp. The next section starts at the next function or at the end of the file.
