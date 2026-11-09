@@ -1,3 +1,8 @@
+# KOMMENTOINTIOHJE / CODE MAP
+# Tiedoston tarkoitus: GitHub Actions -työnkulku sovelluksen riippuvuuksien, TypeScript-koodin ja tuotantokoontiversion tarkistamiseen.
+# Rakenne: on = tapahtumat, jotka käynnistävät työnkulun; jobs = työt; steps = yksittäiset suoritettavat vaiheet.
+# Muuta vaiheita yksi kerrallaan ja säilytä YAML-sisennys.
+
 name: Application checks
 
 on:
@@ -12,6 +17,7 @@ permissions:
 jobs:
   application:
     runs-on: ubuntu-latest
+# TYÖVAIHEEN RAKENNE: alla määritellään suoritettavat tehtävät tai niiden vaiheet.
     steps:
       - name: Check out repository
         uses: actions/checkout@v7.0.1
