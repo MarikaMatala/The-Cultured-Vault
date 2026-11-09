@@ -1,6 +1,8 @@
 // CODE MAP / COMMENTING GUIDE
 // File purpose: Application interface strings and translation handling.
-// Structure: imports and settings first, followed by data types and helper functions, with the component or main operations last.
+// CODE MAP: imports and locale types -> English message dictionary -> Finnish message dictionary -> shared category keys and dictionary types.
+// EDITING TIP: keep the same message keys in both language dictionaries. Update the English and Finnish values together.
+// Avoid changing message keys unless every component that uses the key is updated as well.
 
 import type { Locale } from "./config";
 
