@@ -43,3 +43,5 @@ const catalogueSource: CatalogueSource = new SeedCatalogueSource();
 export function getCatalogueEntries(): Promise<CatalogueEntry[]> {
   return catalogueSource.list();
 }
+
+// TOIMINTO-OSIO PÄÄTTYY: getCatalogueEntries. Seuraava osio alkaa seuraavasta toiminnosta tai tiedoston lopusta.
