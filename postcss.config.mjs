@@ -1,6 +1,6 @@
-// KOMMENTOINTIOHJE / CODE MAP
-// Tiedoston tarkoitus: PostCSS-työkalun asetukset CSS:n käsittelyä varten.
-// Rakenne: tuonnit ja asetukset ensin; tämän jälkeen määritellään työkalun toiminta.
+// CODE MAP / COMMENTING GUIDE
+// File purpose: PostCSS configuration for processing CSS.
+// Structure: imports and settings first; the tool's behavior is defined below.
 
 const config = {
   plugins: {
