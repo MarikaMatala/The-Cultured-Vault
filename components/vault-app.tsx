@@ -235,6 +235,7 @@ export function VaultApp({ config, entries }: VaultAppProps) {
         </aside>
       </div>
 
+      {/* SECTION 4: catalogue search, sorting, category filters, and result cards. */}
       <section id="catalogue" className="shell catalogue-section" aria-labelledby="catalogue-title">
         <div className="section-heading">
           <div>
@@ -336,6 +337,7 @@ export function VaultApp({ config, entries }: VaultAppProps) {
         </div>
       </section>
 
+      {/* SECTION 5: project introduction and privacy information. */}
       <section id="about" className="shell about-section" aria-labelledby="about-title">
         <div className="about-copy">
           <span className="eyebrow">{t.aboutEyebrow}</span>
@@ -352,6 +354,7 @@ export function VaultApp({ config, entries }: VaultAppProps) {
         </aside>
       </section>
 
+      {/* SECTION 6: current implementation status and project roadmap. */}
       <section id="status" className="shell status-section" aria-labelledby="status-title">
         <div className="status-panel">
           <div>
@@ -393,6 +396,7 @@ export function VaultApp({ config, entries }: VaultAppProps) {
         </div>
       </section>
 
+      {/* SECTION 7: footer links and project attribution. */}
       <footer className="site-footer">
         <div className="shell footer-inner">
           <div>
