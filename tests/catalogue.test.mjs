@@ -91,3 +91,5 @@ test("release years are optional integers in the supported range", () => {
     }
   }
 });
+
+// TOIMINTO-OSIO PÄÄTTYY: assertPublicMetadata. Seuraava osio alkaa seuraavasta toiminnosta tai tiedoston lopusta.
