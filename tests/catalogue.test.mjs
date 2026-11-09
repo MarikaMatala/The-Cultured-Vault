@@ -1,6 +1,6 @@
-// KOMMENTOINTIOHJE / CODE MAP
-// Tiedoston tarkoitus: JavaScript-testit katalogin käsittelylle, tietueiden validoinnille ja apufunktioille.
-// Rakenne: testidata ja valmistelut ensin, testitapaukset seuraavaksi. Jokainen testi tarkistaa yhden rajatun asian.
+// CODE MAP / COMMENTING GUIDE
+// File purpose: JavaScript-testit katalogin käsittelylle, tietueiden validoinnille ja apufunktioille.
+// Structure: testidata ja valmistelut ensin, testitapaukset seuraavaksi. Jokainen testi tarkistaa yhden rajatun asian.
 
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
@@ -38,13 +38,13 @@ function assertPublicMetadata(value, path = "catalogue") {
   }
 }
 
-// TESTIOSIO ALKAA: seuraava tapaus tarkistaa yhden toiminnallisuuden.
+// TEST SECTION START: the following case checks one specific behavior.
 test("starter catalogue is a non-empty array", () => {
   assert.ok(Array.isArray(seed));
   assert.ok(seed.length > 0);
 });
 
-// TESTIOSIO ALKAA: seuraava tapaus tarkistaa yhden toiminnallisuuden.
+// TEST SECTION START: the following case checks one specific behavior.
 test("every catalogue entry has a unique, non-empty ID and title", () => {
   const ids = seed.map((entry) => entry.id);
 
@@ -58,14 +58,14 @@ test("every catalogue entry has a unique, non-empty ID and title", () => {
   }
 });
 
-// TESTIOSIO ALKAA: seuraava tapaus tarkistaa yhden toiminnallisuuden.
+// TEST SECTION START: the following case checks one specific behavior.
 test("every entry uses a media type supported by the initial interface", () => {
   for (const entry of seed) {
     assert.ok(supportedMediaTypes.has(entry.mediaType), entry.mediaType);
   }
 });
 
-// TESTIOSIO ALKAA: seuraava tapaus tarkistaa yhden toiminnallisuuden.
+// TEST SECTION START: the following case checks one specific behavior.
 test("optional genres and tags are arrays of strings", () => {
   for (const entry of seed) {
     for (const field of ["genres", "tags"]) {
@@ -77,12 +77,12 @@ test("optional genres and tags are arrays of strings", () => {
   }
 });
 
-// TESTIOSIO ALKAA: seuraava tapaus tarkistaa yhden toiminnallisuuden.
+// TEST SECTION START: the following case checks one specific behavior.
 test("starter catalogue contains public metadata only", () => {
   assertPublicMetadata(seed);
 });
 
-// TESTIOSIO ALKAA: seuraava tapaus tarkistaa yhden toiminnallisuuden.
+// TEST SECTION START: the following case checks one specific behavior.
 test("release years are optional integers in the supported range", () => {
   for (const entry of seed) {
     if (entry.releaseYear !== undefined && entry.releaseYear !== null) {
@@ -92,4 +92,4 @@ test("release years are optional integers in the supported range", () => {
   }
 });
 
-// TOIMINTO-OSIO PÄÄTTYY: assertPublicMetadata. Seuraava osio alkaa seuraavasta toiminnosta tai tiedoston lopusta.
+// TOIMINTO-OSIO PÄÄTTYY: assertPublicMetadata. The next section starts at the next function or at the end of the file.
