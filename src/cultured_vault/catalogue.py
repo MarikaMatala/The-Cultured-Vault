@@ -47,6 +47,7 @@ class CatalogueValidationError(ValueError):
 
 
 @dataclass(frozen=True, slots=True)
+# LUOKKA-OSIO PÄÄTTYY: CatalogueValidationError. Seuraava osio alkaa seuraavasta määrittelystä tai tiedoston lopusta.
 class CatalogueEntry:
     id: str
     title: str
@@ -76,6 +77,7 @@ class CatalogueEntry:
 
 
 # FUNKTIO-OSIO ALKAA: _required_text.
+# LUOKKA-OSIO PÄÄTTYY: CatalogueEntry. Seuraava osio alkaa seuraavasta määrittelystä tai tiedoston lopusta.
 def _required_text(record: dict[str, Any], key: str, label: str, maximum: int) -> str:
     value = record.get(key)
     if not isinstance(value, str) or not value.strip():
@@ -87,6 +89,7 @@ def _required_text(record: dict[str, Any], key: str, label: str, maximum: int) -
 
 
 # FUNKTIO-OSIO ALKAA: _optional_text.
+# FUNKTIO-OSIO PÄÄTTYY: _required_text. Seuraava osio alkaa seuraavasta määrittelystä tai tiedoston lopusta.
 def _optional_text(record: dict[str, Any], key: str, label: str) -> str | None:
     value = record.get(key)
     if value is None or value == "":
@@ -97,6 +100,7 @@ def _optional_text(record: dict[str, Any], key: str, label: str) -> str | None:
 
 
 # FUNKTIO-OSIO ALKAA: _string_list.
+# FUNKTIO-OSIO PÄÄTTYY: _optional_text. Seuraava osio alkaa seuraavasta määrittelystä tai tiedoston lopusta.
 def _string_list(record: dict[str, Any], key: str, label: str) -> tuple[str, ...]:
     value = record.get(key, [])
     if value is None:
@@ -112,6 +116,7 @@ def _string_list(record: dict[str, Any], key: str, label: str) -> tuple[str, ...
 
 
 # FUNKTIO-OSIO ALKAA: _country_codes.
+# FUNKTIO-OSIO PÄÄTTYY: _string_list. Seuraava osio alkaa seuraavasta määrittelystä tai tiedoston lopusta.
 def _country_codes(value: Any, label: str) -> tuple[str, ...]:
     if value is None or value == "":
         return ()
@@ -133,6 +138,7 @@ def _country_codes(value: Any, label: str) -> tuple[str, ...]:
 
 
 # FUNKTIO-OSIO ALKAA: parse_entry.
+# FUNKTIO-OSIO PÄÄTTYY: _country_codes. Seuraava osio alkaa seuraavasta määrittelystä tai tiedoston lopusta.
 def parse_entry(record: Any, index: int = 0) -> CatalogueEntry:
     """Validate one raw JSON record and normalize database-facing values."""
     label = f"Entry {index + 1}"
@@ -176,6 +182,7 @@ def parse_entry(record: Any, index: int = 0) -> CatalogueEntry:
 
 
 # FUNKTIO-OSIO ALKAA: load_catalogue.
+# FUNKTIO-OSIO PÄÄTTYY: parse_entry. Seuraava osio alkaa seuraavasta määrittelystä tai tiedoston lopusta.
 def load_catalogue(path: Path) -> list[CatalogueEntry]:
     """Load the JSON catalogue, validating every record and unique ID."""
     try:
@@ -195,3 +202,5 @@ def load_catalogue(path: Path) -> list[CatalogueEntry]:
         seen_ids.add(entry.id)
         entries.append(entry)
     return entries
+
+# FUNKTIO-OSIO PÄÄTTYY: load_catalogue. Seuraava osio alkaa seuraavasta määrittelystä tai tiedoston lopusta.
