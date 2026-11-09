@@ -1,5 +1,5 @@
 # CODE MAP / COMMENTING GUIDE
-# File purpose: GitHub Actions -työnkulku sovelluksen riippuvuuksien, TypeScript-koodin ja tuotantokoontiversion tarkistamiseen.
+# File purpose: GitHub Actions workflow for checking application dependencies, TypeScript code, and the production build.
 # Structure: on = workflow triggers; jobs = tasks; steps = individual actions to execute.
 # Change workflow steps one at a time and preserve YAML indentation.
 
