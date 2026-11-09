@@ -5,9 +5,9 @@ human-readable values into stable values compatible with the database enums
 and ISO country codes, without modifying the source catalogue.
 """
 
-# KOMMENTOINTIOHJE / CODE MAP
-# Tiedoston tarkoitus: Python-kirjasto katalogin lataamiseen, muokkaamiseen ja tietueiden käsittelyyn.
-# Rakenne: tuonnit ja tietorakenteet ensin, apufunktiot seuraavaksi, päätoiminnot lopuksi.
+# CODE MAP / COMMENTING GUIDE
+# File purpose: Python library for loading, validating, and processing catalogue records.
+# Structure: imports and data structures first, followed by helper functions and main operations.
 
 from __future__ import annotations
 
@@ -47,7 +47,7 @@ class CatalogueValidationError(ValueError):
 
 
 @dataclass(frozen=True, slots=True)
-# LUOKKA-OSIO PÄÄTTYY: CatalogueValidationError. Seuraava osio alkaa seuraavasta määrittelystä tai tiedoston lopusta.
+# CLASS SECTION END: CatalogueValidationError. The next section starts at the next definition or at the end of the file.
 class CatalogueEntry:
     id: str
     title: str
@@ -76,8 +76,8 @@ class CatalogueEntry:
         }
 
 
-# FUNKTIO-OSIO ALKAA: _required_text.
-# LUOKKA-OSIO PÄÄTTYY: CatalogueEntry. Seuraava osio alkaa seuraavasta määrittelystä tai tiedoston lopusta.
+# FUNCTION SECTION START: _required_text.
+# CLASS SECTION END: CatalogueEntry. The next section starts at the next definition or at the end of the file.
 def _required_text(record: dict[str, Any], key: str, label: str, maximum: int) -> str:
     value = record.get(key)
     if not isinstance(value, str) or not value.strip():
@@ -88,8 +88,8 @@ def _required_text(record: dict[str, Any], key: str, label: str, maximum: int) -
     return value
 
 
-# FUNKTIO-OSIO ALKAA: _optional_text.
-# FUNKTIO-OSIO PÄÄTTYY: _required_text. Seuraava osio alkaa seuraavasta määrittelystä tai tiedoston lopusta.
+# FUNCTION SECTION START: _optional_text.
+# FUNCTION SECTION END: _required_text. The next section starts at the next definition or at the end of the file.
 def _optional_text(record: dict[str, Any], key: str, label: str) -> str | None:
     value = record.get(key)
     if value is None or value == "":
@@ -99,8 +99,8 @@ def _optional_text(record: dict[str, Any], key: str, label: str) -> str | None:
     return value.strip() or None
 
 
-# FUNKTIO-OSIO ALKAA: _string_list.
-# FUNKTIO-OSIO PÄÄTTYY: _optional_text. Seuraava osio alkaa seuraavasta määrittelystä tai tiedoston lopusta.
+# FUNCTION SECTION START: _string_list.
+# FUNCTION SECTION END: _optional_text. The next section starts at the next definition or at the end of the file.
 def _string_list(record: dict[str, Any], key: str, label: str) -> tuple[str, ...]:
     value = record.get(key, [])
     if value is None:
@@ -115,8 +115,8 @@ def _string_list(record: dict[str, Any], key: str, label: str) -> tuple[str, ...
     return tuple(dict.fromkeys(cleaned))
 
 
-# FUNKTIO-OSIO ALKAA: _country_codes.
-# FUNKTIO-OSIO PÄÄTTYY: _string_list. Seuraava osio alkaa seuraavasta määrittelystä tai tiedoston lopusta.
+# FUNCTION SECTION START: _country_codes.
+# FUNCTION SECTION END: _string_list. The next section starts at the next definition or at the end of the file.
 def _country_codes(value: Any, label: str) -> tuple[str, ...]:
     if value is None or value == "":
         return ()
@@ -137,8 +137,8 @@ def _country_codes(value: Any, label: str) -> tuple[str, ...]:
     return tuple(dict.fromkeys(codes))
 
 
-# FUNKTIO-OSIO ALKAA: parse_entry.
-# FUNKTIO-OSIO PÄÄTTYY: _country_codes. Seuraava osio alkaa seuraavasta määrittelystä tai tiedoston lopusta.
+# FUNCTION SECTION START: parse_entry.
+# FUNCTION SECTION END: _country_codes. The next section starts at the next definition or at the end of the file.
 def parse_entry(record: Any, index: int = 0) -> CatalogueEntry:
     """Validate one raw JSON record and normalize database-facing values."""
     label = f"Entry {index + 1}"
@@ -181,8 +181,8 @@ def parse_entry(record: Any, index: int = 0) -> CatalogueEntry:
     )
 
 
-# FUNKTIO-OSIO ALKAA: load_catalogue.
-# FUNKTIO-OSIO PÄÄTTYY: parse_entry. Seuraava osio alkaa seuraavasta määrittelystä tai tiedoston lopusta.
+# FUNCTION SECTION START: load_catalogue.
+# FUNCTION SECTION END: parse_entry. The next section starts at the next definition or at the end of the file.
 def load_catalogue(path: Path) -> list[CatalogueEntry]:
     """Load the JSON catalogue, validating every record and unique ID."""
     try:
@@ -203,4 +203,4 @@ def load_catalogue(path: Path) -> list[CatalogueEntry]:
         entries.append(entry)
     return entries
 
-# FUNKTIO-OSIO PÄÄTTYY: load_catalogue. Seuraava osio alkaa seuraavasta määrittelystä tai tiedoston lopusta.
+# FUNCTION SECTION END: load_catalogue. The next section starts at the next definition or at the end of the file.
