@@ -41,7 +41,7 @@ const categoryMediaTypes: Partial<Record<CategoryKey, string[]>> = {
   comics: ["comic"],
 };
 
-// FUNKTIO-OSIO ALKAA: matchesCategory.
+// Tarkistaa, kuuluuko katalogin teos valittuun sisältöluokkaan.
 function matchesCategory(entry: CatalogueEntry, category: CategoryKey): boolean {
   if (category === "all") {
     return true;
@@ -50,7 +50,7 @@ function matchesCategory(entry: CatalogueEntry, category: CategoryKey): boolean 
   return categoryMediaTypes[category]?.includes(entry.mediaType) ?? false;
 }
 
-// FUNKTIO-OSIO ALKAA: coverVariant.
+// Valitsee teostyypin perusteella sopivan kansikuvan visuaalisen tyylin.
 // TOIMINTO-OSIO PÄÄTTYY: matchesCategory. Seuraava osio alkaa seuraavasta toiminnosta tai tiedoston lopusta.
 function coverVariant(mediaType: string): string {
   if (mediaType === "film") return "cover-film";
@@ -63,20 +63,20 @@ function coverVariant(mediaType: string): string {
   return "cover-film";
 }
 
-// FUNKTIO-OSIO ALKAA: mediaTypeLabel.
+// Palauttaa teostyypin käyttöliittymässä näytettävän käännöksen.
 // TOIMINTO-OSIO PÄÄTTYY: coverVariant. Seuraava osio alkaa seuraavasta toiminnosta tai tiedoston lopusta.
 function mediaTypeLabel(mediaType: string, locale: Locale): string {
   const dictionary = messages[locale].mediaTypes as Record<string, string>;
   return dictionary[mediaType] ?? mediaType.replaceAll("-", " ");
 }
 
-// FUNKTIO-OSIO ALKAA: creatorName.
+// Palauttaa teoksen tekijän nimen yhtenäisessä muodossa.
 // TOIMINTO-OSIO PÄÄTTYY: mediaTypeLabel. Seuraava osio alkaa seuraavasta toiminnosta tai tiedoston lopusta.
 function creatorName(entry: CatalogueEntry): string | undefined {
   return entry.creator || entry.artist || entry.author;
 }
 
-// FUNKTIO-OSIO ALKAA: VaultApp.
+// Sovelluksen pääkomponentti: hallitsee katalogin näkymää, hakuja, suodattimia, järjestystä ja käyttäjän toimintoja.
 // TOIMINTO-OSIO PÄÄTTYY: creatorName. Seuraava osio alkaa seuraavasta toiminnosta tai tiedoston lopusta.
 export function VaultApp({ config, entries }: VaultAppProps) {
   const [locale, setLocale] = useState<Locale>(config.defaultLocale);
