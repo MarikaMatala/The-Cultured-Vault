@@ -1,31 +1,31 @@
--- KOMMENTOINTIOHJE / CODE MAP
--- Tiedoston tarkoitus: Supabase-tietokannan alkuperäinen skeema: taulut, relaatiot, indeksit ja käyttöoikeudet.
--- Lue migraatio ylhäältä alas. Jokainen CREATE / ALTER / POLICY -lohko muuttaa tietokannan rakennetta tai käyttöoikeuksia.
+-- CODE MAP / COMMENTING GUIDE
+-- File purpose: Supabase-tietokannan alkuperäinen skeema: taulut, relaatiot, indeksit ja käyttöoikeudet.
+-- Read the migration from top to bottom. Each CREATE / ALTER / POLICY block changes the database schema or access permissions.
 
 -- Initial database foundation for The Cultured Vault.
 -- Apply to a dedicated Supabase project after reviewing the deployment settings.
 
 create extension if not exists pgcrypto;
 
--- SQL-OSIO ALKAA: CREATE TYPE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
+-- SQL SECTION START: CREATE TYPE – review the table or target in this block before making changes.
 create type public.media_type as enum (
   'film', 'tv_series', 'animated_series', 'animation_film', 'documentary',
   'podcast', 'music_album', 'music_track', 'video_game', 'book', 'comic', 'other'
 );
--- SQL-OSIO ALKAA: CREATE TYPE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE TYPE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE TYPE – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE TYPE-lohko. The next database change starts at the next statement.
 create type public.library_status as enum (
   'want_to_experience', 'in_progress', 'completed', 'paused', 'dropped', 'revisit'
 );
--- SQL-OSIO ALKAA: CREATE TYPE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE TYPE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE TYPE – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE TYPE-lohko. The next database change starts at the next statement.
 create type public.content_visibility as enum ('public', 'unlisted', 'private');
--- SQL-OSIO ALKAA: CREATE TYPE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE TYPE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE TYPE – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE TYPE-lohko. The next database change starts at the next statement.
 create type public.moderation_status as enum ('pending', 'approved', 'hidden', 'removed');
 
--- SQL-OSIO ALKAA: CREATE TABLE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE TYPE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE TABLE – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE TYPE-lohko. The next database change starts at the next statement.
 create table public.profiles (
   id uuid primary key references auth.users(id) on delete cascade,
   username text not null unique check (username ~ '^[A-Za-z0-9_]{3,30}$'),
@@ -37,8 +37,8 @@ create table public.profiles (
   updated_at timestamptz not null default now()
 );
 
--- SQL-OSIO ALKAA: CREATE TABLE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE TABLE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE TABLE – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE TABLE-lohko. The next database change starts at the next statement.
 create table public.works (
   id uuid primary key default gen_random_uuid(),
   title text not null check (char_length(title) between 1 and 300),
@@ -56,32 +56,32 @@ create table public.works (
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
--- SQL-OSIO ALKAA: CREATE INDEX – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE TABLE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE INDEX – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE TABLE-lohko. The next database change starts at the next statement.
 create index works_title_idx on public.works using gin (to_tsvector('simple', coalesce(title,'') || ' ' || coalesce(original_title,'')));
--- SQL-OSIO ALKAA: CREATE INDEX – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE INDEX-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE INDEX – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE INDEX-lohko. The next database change starts at the next statement.
 create index works_media_type_idx on public.works(media_type);
--- SQL-OSIO ALKAA: CREATE INDEX – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE INDEX-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE INDEX – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE INDEX-lohko. The next database change starts at the next statement.
 create index works_release_year_idx on public.works(release_year);
 
--- SQL-OSIO ALKAA: CREATE TABLE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE INDEX-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE TABLE – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE INDEX-lohko. The next database change starts at the next statement.
 create table public.genres (
   id uuid primary key default gen_random_uuid(),
   slug text not null unique,
   name text not null unique
 );
--- SQL-OSIO ALKAA: CREATE TABLE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE TABLE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE TABLE – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE TABLE-lohko. The next database change starts at the next statement.
 create table public.work_genres (
   work_id uuid not null references public.works(id) on delete cascade,
   genre_id uuid not null references public.genres(id) on delete cascade,
   primary key (work_id, genre_id)
 );
--- SQL-OSIO ALKAA: CREATE TABLE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE TABLE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE TABLE – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE TABLE-lohko. The next database change starts at the next statement.
 create table public.work_external_ids (
   id uuid primary key default gen_random_uuid(),
   work_id uuid not null references public.works(id) on delete cascade,
@@ -92,8 +92,8 @@ create table public.work_external_ids (
   unique(provider, external_id)
 );
 
--- SQL-OSIO ALKAA: CREATE TABLE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE TABLE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE TABLE – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE TABLE-lohko. The next database change starts at the next statement.
 create table public.user_ratings (
   id uuid primary key default gen_random_uuid(),
   user_id uuid not null references public.profiles(id) on delete cascade,
@@ -105,12 +105,12 @@ create table public.user_ratings (
   updated_at timestamptz not null default now(),
   unique(user_id, work_id)
 );
--- SQL-OSIO ALKAA: CREATE INDEX – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE TABLE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE INDEX – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE TABLE-lohko. The next database change starts at the next statement.
 create index user_ratings_work_idx on public.user_ratings(work_id);
 
--- SQL-OSIO ALKAA: CREATE TABLE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE INDEX-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE TABLE – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE INDEX-lohko. The next database change starts at the next statement.
 create table public.reviews (
   id uuid primary key default gen_random_uuid(),
   user_id uuid not null references public.profiles(id) on delete cascade,
@@ -123,12 +123,12 @@ create table public.reviews (
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
--- SQL-OSIO ALKAA: CREATE INDEX – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE TABLE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE INDEX – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE TABLE-lohko. The next database change starts at the next statement.
 create index reviews_work_idx on public.reviews(work_id, created_at desc);
 
--- SQL-OSIO ALKAA: CREATE TABLE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE INDEX-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE TABLE – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE INDEX-lohko. The next database change starts at the next statement.
 create table public.user_library (
   id uuid primary key default gen_random_uuid(),
   user_id uuid not null references public.profiles(id) on delete cascade,
@@ -142,8 +142,8 @@ create table public.user_library (
   unique(user_id, work_id)
 );
 
--- SQL-OSIO ALKAA: CREATE TABLE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE TABLE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE TABLE – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE TABLE-lohko. The next database change starts at the next statement.
 create table public.lists (
   id uuid primary key default gen_random_uuid(),
   user_id uuid not null references public.profiles(id) on delete cascade,
@@ -153,8 +153,8 @@ create table public.lists (
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
--- SQL-OSIO ALKAA: CREATE TABLE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE TABLE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE TABLE – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE TABLE-lohko. The next database change starts at the next statement.
 create table public.list_items (
   id uuid primary key default gen_random_uuid(),
   list_id uuid not null references public.lists(id) on delete cascade,
@@ -164,8 +164,8 @@ create table public.list_items (
   unique(list_id, work_id)
 );
 
--- SQL-OSIO ALKAA: CREATE TABLE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE TABLE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE TABLE – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE TABLE-lohko. The next database change starts at the next statement.
 create table public.comments (
   id uuid primary key default gen_random_uuid(),
   user_id uuid not null references public.profiles(id) on delete cascade,
@@ -179,162 +179,162 @@ create table public.comments (
 );
 
 -- Enable row-level security on every API-facing table.
--- SQL-OSIO ALKAA: ALTER TABLE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE TABLE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: ALTER TABLE – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE TABLE-lohko. The next database change starts at the next statement.
 alter table public.profiles enable row level security;
--- SQL-OSIO ALKAA: ALTER TABLE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: ALTER TABLE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: ALTER TABLE – review the table or target in this block before making changes.
+-- SQL SECTION END: ALTER TABLE-lohko. The next database change starts at the next statement.
 alter table public.works enable row level security;
--- SQL-OSIO ALKAA: ALTER TABLE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: ALTER TABLE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: ALTER TABLE – review the table or target in this block before making changes.
+-- SQL SECTION END: ALTER TABLE-lohko. The next database change starts at the next statement.
 alter table public.genres enable row level security;
--- SQL-OSIO ALKAA: ALTER TABLE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: ALTER TABLE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: ALTER TABLE – review the table or target in this block before making changes.
+-- SQL SECTION END: ALTER TABLE-lohko. The next database change starts at the next statement.
 alter table public.work_genres enable row level security;
--- SQL-OSIO ALKAA: ALTER TABLE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: ALTER TABLE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: ALTER TABLE – review the table or target in this block before making changes.
+-- SQL SECTION END: ALTER TABLE-lohko. The next database change starts at the next statement.
 alter table public.work_external_ids enable row level security;
--- SQL-OSIO ALKAA: ALTER TABLE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: ALTER TABLE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: ALTER TABLE – review the table or target in this block before making changes.
+-- SQL SECTION END: ALTER TABLE-lohko. The next database change starts at the next statement.
 alter table public.user_ratings enable row level security;
--- SQL-OSIO ALKAA: ALTER TABLE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: ALTER TABLE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: ALTER TABLE – review the table or target in this block before making changes.
+-- SQL SECTION END: ALTER TABLE-lohko. The next database change starts at the next statement.
 alter table public.reviews enable row level security;
--- SQL-OSIO ALKAA: ALTER TABLE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: ALTER TABLE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: ALTER TABLE – review the table or target in this block before making changes.
+-- SQL SECTION END: ALTER TABLE-lohko. The next database change starts at the next statement.
 alter table public.user_library enable row level security;
--- SQL-OSIO ALKAA: ALTER TABLE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: ALTER TABLE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: ALTER TABLE – review the table or target in this block before making changes.
+-- SQL SECTION END: ALTER TABLE-lohko. The next database change starts at the next statement.
 alter table public.lists enable row level security;
--- SQL-OSIO ALKAA: ALTER TABLE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: ALTER TABLE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: ALTER TABLE – review the table or target in this block before making changes.
+-- SQL SECTION END: ALTER TABLE-lohko. The next database change starts at the next statement.
 alter table public.list_items enable row level security;
--- SQL-OSIO ALKAA: ALTER TABLE – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: ALTER TABLE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: ALTER TABLE – review the table or target in this block before making changes.
+-- SQL SECTION END: ALTER TABLE-lohko. The next database change starts at the next statement.
 alter table public.comments enable row level security;
 
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: ALTER TABLE-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: ALTER TABLE-lohko. The next database change starts at the next statement.
 create policy "Public profiles and own profile are visible"
 on public.profiles for select to anon, authenticated
 using (is_public or id = (select auth.uid()));
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "Members update their own profile"
 on public.profiles for update to authenticated
 using (id = (select auth.uid())) with check (id = (select auth.uid()));
 
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "Published catalogue works are visible"
 on public.works for select to anon, authenticated using (is_published);
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "Genres are visible"
 on public.genres for select to anon, authenticated using (true);
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "Published work genres are visible"
 on public.work_genres for select to anon, authenticated
 using (exists (select 1 from public.works w where w.id = work_id and w.is_published));
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "Published external identifiers are visible"
 on public.work_external_ids for select to anon, authenticated
 using (exists (select 1 from public.works w where w.id = work_id and w.is_published));
 
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "Approved public ratings are visible"
 on public.user_ratings for select to anon, authenticated
 using ((visibility = 'public' and moderation_state = 'approved') or user_id = (select auth.uid()));
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "Members add own pending ratings"
 on public.user_ratings for insert to authenticated
 with check (user_id = (select auth.uid()) and moderation_state = 'pending');
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "Members update own ratings"
 on public.user_ratings for update to authenticated
 using (user_id = (select auth.uid())) with check (user_id = (select auth.uid()));
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "Members delete own ratings"
 on public.user_ratings for delete to authenticated using (user_id = (select auth.uid()));
 
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "Approved public reviews are visible"
 on public.reviews for select to anon, authenticated
 using ((visibility = 'public' and moderation_state = 'approved') or user_id = (select auth.uid()));
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "Members add own pending reviews"
 on public.reviews for insert to authenticated
 with check (user_id = (select auth.uid()) and moderation_state = 'pending');
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "Members update own reviews"
 on public.reviews for update to authenticated
 using (user_id = (select auth.uid())) with check (user_id = (select auth.uid()));
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "Members delete own reviews"
 on public.reviews for delete to authenticated using (user_id = (select auth.uid()));
 
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "Members manage own library"
 on public.user_library for all to authenticated
 using (user_id = (select auth.uid())) with check (user_id = (select auth.uid()));
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "Public lists and own lists are visible"
 on public.lists for select to anon, authenticated
 using (visibility = 'public' or user_id = (select auth.uid()));
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "Members create own lists"
 on public.lists for insert to authenticated with check (user_id = (select auth.uid()));
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "Members update own lists"
 on public.lists for update to authenticated
 using (user_id = (select auth.uid())) with check (user_id = (select auth.uid()));
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "Members delete own lists"
 on public.lists for delete to authenticated using (user_id = (select auth.uid()));
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "Items in public or own lists are visible"
 on public.list_items for select to anon, authenticated
 using (exists (select 1 from public.lists l where l.id = list_id and (l.visibility = 'public' or l.user_id = (select auth.uid()))));
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "List owners manage list items"
 on public.list_items for all to authenticated
 using (exists (select 1 from public.lists l where l.id = list_id and l.user_id = (select auth.uid())))
 with check (exists (select 1 from public.lists l where l.id = list_id and l.user_id = (select auth.uid())));
 
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "Approved comments are visible"
 on public.comments for select to anon, authenticated
 using (moderation_state = 'approved' or user_id = (select auth.uid()));
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "Members add own pending comments"
 on public.comments for insert to authenticated
 with check (user_id = (select auth.uid()) and moderation_state = 'pending');
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "Members update own comments"
 on public.comments for update to authenticated
 using (user_id = (select auth.uid())) with check (user_id = (select auth.uid()));
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 create policy "Members delete own comments"
 on public.comments for delete to authenticated using (user_id = (select auth.uid()));
 
@@ -343,4 +343,4 @@ grant select on public.works, public.genres, public.work_genres, public.work_ext
 grant select, update on public.profiles to authenticated;
 grant select, insert, update, delete on public.user_ratings, public.reviews, public.user_library, public.lists, public.list_items, public.comments to authenticated;
 
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
