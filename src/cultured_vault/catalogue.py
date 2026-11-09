@@ -1,13 +1,13 @@
-# KOMMENTOINTIOHJE / CODE MAP
-# Tiedoston tarkoitus: Python-kirjasto katalogin lataamiseen, muokkaamiseen ja tietueiden käsittelyyn.
-# Rakenne: tuonnit ja tietorakenteet ensin, apufunktiot seuraavaksi, päätoiminnot lopuksi.
-
 """Validate and normalize the public starter catalogue.
 
 The JSON file is an editorial source format. This module converts its
 human-readable values into stable values compatible with the database enums
 and ISO country codes, without modifying the source catalogue.
 """
+
+# KOMMENTOINTIOHJE / CODE MAP
+# Tiedoston tarkoitus: Python-kirjasto katalogin lataamiseen, muokkaamiseen ja tietueiden käsittelyyn.
+# Rakenne: tuonnit ja tietorakenteet ensin, apufunktiot seuraavaksi, päätoiminnot lopuksi.
 
 from __future__ import annotations
 
