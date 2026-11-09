@@ -1,7 +1,7 @@
-# KOMMENTOINTIOHJE / CODE MAP
-# Tiedoston tarkoitus: GitHub Actions -työnkulku katalogin validointiin ja Python-yksikkötestien suorittamiseen.
-# Rakenne: on = tapahtumat, jotka käynnistävät työnkulun; jobs = työt; steps = yksittäiset suoritettavat vaiheet.
-# Muuta vaiheita yksi kerrallaan ja säilytä YAML-sisennys.
+# CODE MAP / COMMENTING GUIDE
+# File purpose: GitHub Actions -työnkulku katalogin validointiin ja Python-yksikkötestien suorittamiseen.
+# Structure: on = workflow triggers; jobs = tasks; steps = individual actions to execute.
+# Change workflow steps one at a time and preserve YAML indentation.
 
 name: Catalogue validation
 
@@ -17,7 +17,7 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-# TYÖVAIHEEN RAKENNE: alla määritellään suoritettavat tehtävät tai niiden vaiheet.
+# JOB STRUCTURE: the tasks and their individual steps are defined below.
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
