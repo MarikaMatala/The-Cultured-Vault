@@ -1,3 +1,7 @@
+// KOMMENTOINTIOHJE / CODE MAP
+// Tiedoston tarkoitus: Python-testit katalogin tietojen lukemiselle, validoinnille ja käsittelylle.
+// Rakenne: testidata ja valmistelut ensin, testitapaukset seuraavaksi. Jokainen testi tarkistaa yhden rajatun asian.
+
 import json
 from pathlib import Path
 import tempfile
