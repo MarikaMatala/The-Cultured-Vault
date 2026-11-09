@@ -1,3 +1,7 @@
+// KOMMENTOINTIOHJE / CODE MAP
+// Tiedoston tarkoitus: JavaScript-testit katalogin käsittelylle, tietueiden validoinnille ja apufunktioille.
+// Rakenne: testidata ja valmistelut ensin, testitapaukset seuraavaksi. Jokainen testi tarkistaa yhden rajatun asian.
+
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { test } from "node:test";
@@ -34,11 +38,13 @@ function assertPublicMetadata(value, path = "catalogue") {
   }
 }
 
+// TESTIOSIO ALKAA: seuraava tapaus tarkistaa yhden toiminnallisuuden.
 test("starter catalogue is a non-empty array", () => {
   assert.ok(Array.isArray(seed));
   assert.ok(seed.length > 0);
 });
 
+// TESTIOSIO ALKAA: seuraava tapaus tarkistaa yhden toiminnallisuuden.
 test("every catalogue entry has a unique, non-empty ID and title", () => {
   const ids = seed.map((entry) => entry.id);
 
@@ -52,12 +58,14 @@ test("every catalogue entry has a unique, non-empty ID and title", () => {
   }
 });
 
+// TESTIOSIO ALKAA: seuraava tapaus tarkistaa yhden toiminnallisuuden.
 test("every entry uses a media type supported by the initial interface", () => {
   for (const entry of seed) {
     assert.ok(supportedMediaTypes.has(entry.mediaType), entry.mediaType);
   }
 });
 
+// TESTIOSIO ALKAA: seuraava tapaus tarkistaa yhden toiminnallisuuden.
 test("optional genres and tags are arrays of strings", () => {
   for (const entry of seed) {
     for (const field of ["genres", "tags"]) {
@@ -69,10 +77,12 @@ test("optional genres and tags are arrays of strings", () => {
   }
 });
 
+// TESTIOSIO ALKAA: seuraava tapaus tarkistaa yhden toiminnallisuuden.
 test("starter catalogue contains public metadata only", () => {
   assertPublicMetadata(seed);
 });
 
+// TESTIOSIO ALKAA: seuraava tapaus tarkistaa yhden toiminnallisuuden.
 test("release years are optional integers in the supported range", () => {
   for (const entry of seed) {
     if (entry.releaseYear !== undefined && entry.releaseYear !== null) {
