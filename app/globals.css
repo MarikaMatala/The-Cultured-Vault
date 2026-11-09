@@ -1,7 +1,12 @@
 /*
  * CODE MAP / COMMENTING GUIDE
  * File purpose: Global application styles, colors, typography, layouts, and responsive interface.
- * Structure: theme variables and global rules first, followed by components and responsive rules.
+ * CODE MAP: theme tokens -> global defaults -> typography and layout -> navigation and catalogue components -> forms and status states -> responsive breakpoints.
+ * EDITING TIPS:
+ * - Change global colors and typography in :root and @theme near the top of this file.
+ * - Search for a component class with Ctrl+F before changing its styles.
+ * - Check the responsive @media blocks near the end before changing dimensions or visibility.
+ * - A later CSS rule can override an earlier one; inspect all matching selectors before editing.
  */
 @import "tailwindcss";
 
