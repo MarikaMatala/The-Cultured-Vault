@@ -1,6 +1,6 @@
--- KOMMENTOINTIOHJE / CODE MAP
--- Tiedoston tarkoitus: Kirjautumisen käyttäjäprofiilit ja kommenttien näkyvyyteen liittyvät tietokantamuutokset.
--- Lue migraatio ylhäältä alas. Jokainen CREATE / ALTER / POLICY -lohko muuttaa tietokannan rakennetta tai käyttöoikeuksia.
+-- CODE MAP / COMMENTING GUIDE
+-- File purpose: Kirjautumisen käyttäjäprofiilit ja kommenttien näkyvyyteen liittyvät tietokantamuutokset.
+-- Read the migration from top to bottom. Each CREATE / ALTER / POLICY block changes the database schema or access permissions.
 
 -- Authentication profile bootstrap and comment visibility hardening.
 -- Apply after 20261106001000_moderation_policy_guard.sql.
@@ -44,10 +44,10 @@ end;
 $$;
 
 revoke all on function public.handle_new_user() from public, anon, authenticated;
--- SQL-OSIO ALKAA: DROP  – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
+-- SQL SECTION START: DROP  – review the table or target in this block before making changes.
 drop trigger if exists on_auth_user_created on auth.users;
--- SQL-OSIO ALKAA: CREATE TRIGGER – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: DROP -lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE TRIGGER – review the table or target in this block before making changes.
+-- SQL SECTION END: DROP -lohko. The next database change starts at the next statement.
 create trigger on_auth_user_created
   after insert on auth.users
   for each row execute function public.handle_new_user();
@@ -93,20 +93,20 @@ end;
 $$;
 
 revoke all on function public.validate_comment_target() from public, anon, authenticated;
--- SQL-OSIO ALKAA: DROP  – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE TRIGGER-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: DROP  – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE TRIGGER-lohko. The next database change starts at the next statement.
 drop trigger if exists validate_comment_target_before_write on public.comments;
--- SQL-OSIO ALKAA: CREATE TRIGGER – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: DROP -lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE TRIGGER – review the table or target in this block before making changes.
+-- SQL SECTION END: DROP -lohko. The next database change starts at the next statement.
 create trigger validate_comment_target_before_write
   before insert or update of review_id, work_id, parent_comment_id
   on public.comments for each row execute function public.validate_comment_target();
 
--- SQL-OSIO ALKAA: DROP  – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE TRIGGER-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: DROP  – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE TRIGGER-lohko. The next database change starts at the next statement.
 drop policy if exists "Approved comments are visible" on public.comments;
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: DROP -lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: DROP -lohko. The next database change starts at the next statement.
 create policy "Approved comments on public content are visible"
 on public.comments for select to anon, authenticated
 using (
@@ -131,11 +131,11 @@ using (
   or user_id = (select auth.uid())
 );
 
--- SQL-OSIO ALKAA: DROP  – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: DROP  – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 drop policy if exists "Members add own pending comments" on public.comments;
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: DROP -lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: DROP -lohko. The next database change starts at the next statement.
 create policy "Members add own pending comments to public content"
 on public.comments for insert to authenticated
 with check (
@@ -157,14 +157,14 @@ with check (
   )
 );
 
--- SQL-OSIO ALKAA: DROP  – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: DROP  – review the table or target in this block before making changes.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
 drop policy if exists "Members update own comments" on public.comments;
--- SQL-OSIO ALKAA: CREATE POLICY – tarkista tämän lohkon taulu tai kohde ennen muutoksia.
--- SQL-OSIO PÄÄTTYY: DROP -lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION START: CREATE POLICY – review the table or target in this block before making changes.
+-- SQL SECTION END: DROP -lohko. The next database change starts at the next statement.
 create policy "Members update own pending comments"
 on public.comments for update to authenticated
 using (user_id = (select auth.uid()))
 with check (user_id = (select auth.uid()) and moderation_state = 'pending');
 
--- SQL-OSIO PÄÄTTYY: CREATE POLICY-lohko. Seuraava tietokantamuutos alkaa seuraavasta komennosta.
+-- SQL SECTION END: CREATE POLICY-lohko. The next database change starts at the next statement.
