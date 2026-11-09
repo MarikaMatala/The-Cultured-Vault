@@ -1,5 +1,5 @@
 # CODE MAP / COMMENTING GUIDE
-# File purpose: GitHub Actions -työnkulku katalogin validointiin ja Python-yksikkötestien suorittamiseen.
+# File purpose: GitHub Actions workflow for catalogue validation and Python unit tests.
 # Structure: on = workflow triggers; jobs = tasks; steps = individual actions to execute.
 # Change workflow steps one at a time and preserve YAML indentation.
 
