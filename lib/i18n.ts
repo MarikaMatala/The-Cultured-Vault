@@ -70,6 +70,8 @@ export const messages = {
       "An open-source cultural archive scaffold. Fork it, make it yours and keep your instance independent.",
     sourceCode: "Source code",
     licence: "MIT licence",
+    privacyNotice: "Privacy notice",
+    copyrightNotice: "Copyright and use",
     categories: {
       all: "All",
       films: "Films",
@@ -158,6 +160,8 @@ export const messages = {
       "Avoimen lähdekoodin kulttuuriarkiston runko. Forkkaa, muokkaa omaksesi ja pidä oma asennuksesi itsenäisenä.",
     sourceCode: "Lähdekoodi",
     licence: "MIT-lisenssi",
+    privacyNotice: "Tietosuojaseloste",
+    copyrightNotice: "Tekijänoikeudet ja käyttö",
     categories: {
       all: "Kaikki",
       films: "Elokuvat",
