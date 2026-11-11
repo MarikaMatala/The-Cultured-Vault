@@ -93,3 +93,16 @@ test("release years are optional integers in the supported range", () => {
 });
 
 // FUNCTION SECTION END: assertPublicMetadata. The next section starts at the next function or at the end of the file.
+
+// TEST SECTION START: optional descriptive metadata must retain its documented scalar types.
+test("optional descriptive metadata fields are strings when present", () => {
+  const textFields = ["originalTitle", "country", "language", "creator", "artist", "author"];
+
+  for (const entry of seed) {
+    for (const field of textFields) {
+      if (entry[field] !== undefined && entry[field] !== null) {
+        assert.equal(typeof entry[field], "string", `${entry.id}: ${field} must be a string`);
+      }
+    }
+  }
+});
