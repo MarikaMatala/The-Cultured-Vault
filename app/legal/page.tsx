@@ -14,7 +14,7 @@ export default function LegalPage() {
         <h3>Mikä tämä sivusto on?</h3>
         <p>The Cultured Vault on Marika Matalamäen itsenäinen oppimis- ja työnäyteprojekti. Se kokoaa elokuviin, sarjoihin, animaatioihin, musiikkiin, kirjoihin, peleihin ja muihin teoksiin liittyvää esimerkkisisältöä. Demo ei ole kaupallinen suoratoisto- tai arvostelupalvelu.</p>
         <h3>Tietosuoja ja selaimeen tallentuvat tiedot</h3>
-        <p>Sivusto ei vaadi käyttäjätiliä eikä käytä mainosevästeitä tai Umami-kävijäseurantaa. Hakusi, omat arviot, kommentit ja ehdotuksesi tallentuvat tämän demon käyttöä varten selaimesi paikalliseen tallennukseen. Niitä ei lähetetä minulle eikä jaeta muille kävijöille. Voit poistaa tiedot selaimesi sivustokohtaisista tallennusasetuksista.</p>
+        <p>Sivusto ei vaadi käyttäjätiliä eikä käytä mainosevästeitä tai Umami-kävijäseurantaa. Omat arviosi, kommenttisi ja ehdotuksesi tallentuvat tämän demon käyttöä varten selaimesi paikalliseen tallennukseen. Niitä ei lähetetä minulle eikä jaeta muille kävijöille. Voit poistaa tiedot selaimesi sivustokohtaisista tallennusasetuksista.</p>
         <p>Hosting-palvelu voi käsitellä teknisiä yhteys- ja lokitietoja sivuston toimittamista ja tietoturvaa varten. Älä syötä demoon arkaluonteisia henkilötietoja tai salasanoja. Ulkoisten linkkien kohdepalvelut vastaavat omasta tietosuojastaan.</p>
         <h3>Tekijänoikeudet</h3>
         <p>Projektin alkuperäinen käyttöliittymä, tekstit, grafiikat ja logo ovat tekijänoikeuden suojaamia, ellei toisin mainita. Teosten nimet, tunnistetiedot ja mahdolliset kuvat voivat kuulua niiden alkuperäisille oikeudenhaltijoille. Sivuston sisältöä saa tarkastella ja linkkiä jakaa. Sisällön kopiointi, muokkaaminen, uudelleenjulkaisu tai kaupallinen käyttö edellyttää lupaa tai kyseisen aineiston lisenssin antamaa oikeutta.</p>
@@ -25,7 +25,7 @@ export default function LegalPage() {
         <h3>About this site</h3>
         <p>The Cultured Vault is an independent learning and portfolio project by Marika Matalamäki. It brings together sample information about films, series, animation, music, books, games and other media. It is not a commercial streaming or review service.</p>
         <h3>Privacy and browser storage</h3>
-        <p>The site requires no account and uses no advertising cookies or Umami visitor analytics. Your searches, personal ratings, comments and suggestions are saved in your browser's local storage for this demo. They are not sent to me or shared with other visitors. You can clear them in your browser's site-data settings.</p>
+        <p>The site requires no account and uses no advertising cookies or Umami visitor analytics. Your personal ratings, comments and suggestions are saved in your browser's local storage for this demo. They are not sent to me or shared with other visitors. You can clear them in your browser's site-data settings.</p>
         <p>The hosting provider may process technical connection and log data to deliver and secure the site. Do not enter sensitive personal information or passwords. External websites linked from this demo are responsible for their own privacy practices.</p>
         <h3>Copyright</h3>
         <p>The project's original interface, text, graphics and logo are protected by copyright unless stated otherwise. Titles, identifying information and any images may belong to their respective rights holders. You may browse the site and share a link. Copying, modifying, republishing or commercially using content requires permission or a licence that expressly allows it.</p>
