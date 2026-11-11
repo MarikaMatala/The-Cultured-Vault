@@ -160,8 +160,8 @@ export function VaultApp({ config, entries }: VaultAppProps) {
             <a href="#catalogue">{t.explore}</a>
             <a href="#about">{t.about}</a>
             <a href="#status">{t.projectStatus}</a>
-            <a href="privacy.html">Privacy / Tietosuoja</a>
-            <a href="copyright.html">Copyright / Tekijänoikeudet</a>
+            <a href="/privacy">Privacy / Tietosuoja</a>
+            <a href="/copyright">Copyright / Tekijänoikeudet</a>
           </nav>
 
           <div className="header-actions">
@@ -416,8 +416,8 @@ export function VaultApp({ config, entries }: VaultAppProps) {
             <a href="https://opensource.org/license/mit/" target="_blank" rel="noreferrer">
               {t.licence}
             </a>
-            <a href="privacy.html" target="_blank" rel="noreferrer">{t.privacyNotice}</a>
-            <a href="copyright.html" target="_blank" rel="noreferrer">{t.copyrightNotice}</a>
+            <a href="/privacy" target="_blank" rel="noreferrer">{t.privacyNotice}</a>
+            <a href="/copyright" target="_blank" rel="noreferrer">{t.copyrightNotice}</a>
             <span>© {new Date().getFullYear()}</span>
           </div>
         </div>
