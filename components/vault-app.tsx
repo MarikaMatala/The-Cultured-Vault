@@ -415,8 +415,7 @@ export function VaultApp({ config, entries }: VaultAppProps) {
             <a href="https://opensource.org/license/mit/" target="_blank" rel="noreferrer">
               {t.licence}
             </a>
-            <a href="/privacy" target="_blank" rel="noreferrer">{t.privacyNotice}</a>
-            <a href="/copyright" target="_blank" rel="noreferrer">{t.copyrightNotice}</a>
+            <a href="/legal" target="_blank" rel="noreferrer">Privacy and copyright / Tietosuoja ja tekijänoikeudet</a>
             <span>© {new Date().getFullYear()}</span>
           </div>
         </div>
