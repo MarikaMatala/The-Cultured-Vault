@@ -160,8 +160,7 @@ export function VaultApp({ config, entries }: VaultAppProps) {
             <a href="#catalogue">{t.explore}</a>
             <a href="#about">{t.about}</a>
             <a href="#status">{t.projectStatus}</a>
-            <a href="/privacy">Privacy / Tietosuoja</a>
-            <a href="/copyright">Copyright / Tekijänoikeudet</a>
+            <a href="/legal">Privacy and copyright / Tietosuoja ja tekijänoikeudet</a>
           </nav>
 
           <div className="header-actions">
